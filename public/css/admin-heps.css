@@ -1,0 +1,78 @@
+.icheckbox_flat-blue,.iradio_flat-blue{display:inline-block;vertical-align:middle;margin:0;padding:0;width:20px;height:20px;background:url(blue.png) no-repeat;border:none;cursor:pointer}.icheckbox_flat-blue{background-position:0 0}.icheckbox_flat-blue.checked{background-position:-22px 0}.icheckbox_flat-blue.disabled{background-position:-44px 0;cursor:default}.icheckbox_flat-blue.checked.disabled{background-position:-66px 0}.iradio_flat-blue{background-position:-88px 0}.iradio_flat-blue.checked{background-position:-110px 0}.iradio_flat-blue.disabled{background-position:-132px 0;cursor:default}.iradio_flat-blue.checked.disabled{background-position:-154px 0}@media only screen and (-webkit-min-device-pixel-ratio:1.5),only screen and (-moz-min-device-pixel-ratio:1.5),only screen and (-o-min-device-pixel-ratio:3/2),only screen and (min-device-pixel-ratio:1.5){.icheckbox_flat-blue,.iradio_flat-blue{background-image:url(blue@2x.png);-webkit-background-size:176px 22px;background-size:176px 22px}}.morris-hover{position:absolute;z-index:1090}.morris-hover.morris-default-style{border-radius:10px;padding:6px;color:#f9f9f9;background:rgba(0,0,0,.8);border:2px solid rgba(0,0,0,.9);font-weight:600;font-size:14px;text-align:center}.morris-hover.morris-default-style .morris-hover-row-label{font-weight:700;margin:.25em 0}.morris-hover.morris-default-style .morris-hover-point{white-space:nowrap;margin:.1em 0}; var wysihtml5 ={version:"0.4.15",//namespaces commands: {},dom: {},quirks: {},toolbar: {},lang: {},selection: {},views: {},INVISIBLE_SPACE: "\uFEFF",EMPTY_FUNCTION: function() {},ELEMENT_NODE: 1,TEXT_NODE: 3,BACKSPACE_KEY: 8,ENTER_KEY: 13,ESCAPE_KEY: 27,SPACE_KEY: 32,DELETE_KEY: 46}function inspect(range){var name = (typeof range.getName == "undefined") ? "Range":range.getName()}function assertValidOffset(node,offset){if (offset < 0 || offset > (isCharacterDataNode(node) ? node.length:node.childNodes.length)) { throw new DOMException("INDEX_SIZE_ERR"); }}function isValidOffset(node,offset){return offset <= (isCharacterDataNode(node) ? node.length:node.childNodes.length)}; ;wysihtml5.lang.Dispatcher = Base.extend({on:function(eventName,handler) { this.events = this.events || {}; this.events[eventName] = this.events[eventName] || []; this.events[eventName].push(handler); return this; },off: function(eventName,handler) { this.events = this.events || {}; var i = 0,handlers,newHandlers; if (eventName) { handlers = this.events[eventName] || [],newHandlers = []; for (; i<handlers.length; i++) { if (handlers[i] !== handler && handler) { newHandlers.push(handlers[i]); } } this.events[eventName] = newHandlers; } else {//Clean up all events this.events = {}; } return this; },fire: function(eventName,payload) { this.events = this.events || {}; var handlers = this.events[eventName] || [],i = 0; for (; i<handlers.length; i++) { handlers[i].call(this,payload); } return this; },//deprecated,use .on() observe: function() { return this.on.apply(this,arguments); },//deprecated,use .off() stopObserving: function() { return this.off.apply(this,arguments); }}; ;(function(){var WHITE_SPACE_START = /^\s+/,
+      WHITE_SPACE_END   = /\s+$/,
+      ENTITY_REG_EXP    = /[&<>\t"]/g,
+      ENTITY_MAP = {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': "&quot;",
+        '\t':"&nbsp; "
+      };
+  wysihtml5.lang.string = function(str) {
+    str = String(str);
+    return {
+      /**
+       * @example
+       *    wysihtml5.lang.string("   foo   ").trim();
+       *    // => "foo"
+       */
+      trim: function() {
+        return str.replace(WHITE_SPACE_START, "").replace(WHITE_SPACE_END, "");
+      },
+
+      /**
+       * @example
+       *    wysihtml5.lang.string("Hello #{name}").interpolate({ name: "Christopher" });
+       *    // => "Hello Christopher"
+       */
+      interpolate: function(vars) {
+        for (var i in vars) {
+          str = this.replace("#{" + i + "}").by(vars[i]);
+        }
+        return str;
+      },
+
+      /**
+       * @example
+       *    wysihtml5.lang.string("Hello Tom").replace("Tom").with("Hans");
+       *    // => "Hello Hans"
+       */
+      replace: function(search) {
+        return {
+          by: function(replace) {
+            return str.split(search).join(replace);
+          }
+        };
+      },
+
+      /**
+       * @example
+       *    wysihtml5.lang.string("hello<br>").escapeHTML();
+       *    // => "hello&lt;br&gt;"
+       */
+      escapeHTML: function(linebreaks, convertSpaces) {
+        var html = str.replace(ENTITY_REG_EXP, function(c) { return ENTITY_MAP[c]; });
+        if (linebreaks) {
+          html = html.replace(/(?:\r\n|\r|\n)/g, '<br />');
+        }
+        if (convertSpaces) {
+          html = html.replace(/  /gi, "&nbsp; ");
+        }
+        return html;
+      }
+    };
+  };
+})();
+;/**
+ * Find urls in descendant text nodes of an element and auto-links them
+ * Inspired by http://james.padolsey.com/javascript/find-and-replace-text-with-javascript/
+ *
+ * @param {Element} element Container element in which to search for urls
+ *
+ * @example
+ *    <div id="text-container">Please click here: www.google.com</div>
+ *    <script>wysihtml5.dom.autoLink(document.getElementById("text-container"));</script>
+ */
+(function(wysihtml5) {
+  var /**
+       * Don't auto-link urls that are contained in the following elements:*/IGNORE_URLS_IN = wysihtml5lang.array(["CODE","PRE","A","SCRIPT","HEAD","TITLE","STYLE"]),URL_REG_EXP =/((https?:\/\/|www\.) [^\s<]{3,})/gi,TRAILING_CHAR_REG_EXP =/([^\w\/\-](,?)) $/i,MAX_DISPLAY_LENGTH = 100,BRACKETS = { ")": "(","]": "[","}": "{" }})(wysihtml5);; wysihtml5.dom.observe = function(element,eventNames,handler){eventNames = typeof(eventNames) === "string" ? [eventNames]:eventNames}return{stop:function() { var eventName,i = 0,length = eventNames.length; for (; i<length; i++) { eventName = eventNames[i]; if (element.removeEventListener) { element.removeEventListener(eventName,handler,false); } else { element.detachEvent("on" + eventName,handlerWrapper); } } }},// Rename unknown tags to this DEFAULT_NODE_NAME = "span",WHITE_SPACE_REG_EXP = /\s+/,defaultRules ={tags:{},classes: {}}; function parse(elementOrHtml,config){return isString ? wysihtml5.quirks.getCorrectInnerHTML(element):element}// ------------ attribute checks ------------ \\ var attributeCheckMethods ={url:(function() { var REG_EXP = /^https?:\/\//i; return function(attributeValue) { if (!attributeValue || !attributeValue.match(REG_EXP)) { return null; } return attributeValue.replace(REG_EXP,function(match) { return match.toLowerCase(); }); }; }) (),src: (function() { var REG_EXP = /^(\/|https?:\/\/) /i; return function(attributeValue) { if (!attributeValue || !attributeValue.match(REG_EXP)) { return null; } return attributeValue.replace(REG_EXP,function(match) { return match.toLowerCase(); }); }; }) (),href: (function() { var REG_EXP = /^(#|\/|https?:\/\/|mailto:) /i; return function(attributeValue) { if (!attributeValue || !attributeValue.match(REG_EXP)) { return null; } return attributeValue.replace(REG_EXP,function(match) { return match.toLowerCase(); }); }; }) (),alt: (function() { var REG_EXP = /[^ a-z0-9_\-]/gi; return function(attributeValue) { if (!attributeValue) { return ""; } return attributeValue.replace(REG_EXP,""); }; }) (),numbers: (function() { var REG_EXP = /\D/g; return function(attributeValue) { attributeValue = (attributeValue || "") .replace(REG_EXP,""); return attributeValue || null; }; }) (),any: (function() { return function(attributeValue) { return attributeValue; }; }) ()}; // ------------ style converter (converts an html attribute to a style) ------------ \\ var addStyleMethods ={align_text:(function() { var mapping = { left: "text-align: left;",right: "text-align: right;",center: "text-align: center;" }; return function(attributeValue) { return mapping[String(attributeValue) .toLowerCase() ]; }; }) (),}; // ------------ class converter (converts an html attribute to a class name) ------------ \\ var addClassMethods ={align_img:(function() { var mapping = { left: "wysiwyg-float-left",right: "wysiwyg-float-right" }; return function(attributeValue) { return mapping[String(attributeValue) .toLowerCase() ]; }; }) (),align_text: (function() { var mapping = { left: "wysiwyg-text-align-left",right: "wysiwyg-text-align-right",center: "wysiwyg-text-align-center",justify: "wysiwyg-text-align-justify" }; return function(attributeValue) { return mapping[String(attributeValue) .toLowerCase() ]; }; }) (),clear_br: (function() { var mapping = { left: "wysiwyg-clear-left",right: "wysiwyg-clear-right",both: "wysiwyg-clear-both",all: "wysiwyg-clear-both" }; return function(attributeValue) { return mapping[String(attributeValue) .toLowerCase() ]; }; }) (),size_font: (function() { var mapping = { "1": "wysiwyg-font-size-xx-small","2": "wysiwyg-font-size-small","3": "wysiwyg-font-size-medium","4": "wysiwyg-font-size-large","5": "wysiwyg-font-size-x-large","6": "wysiwyg-font-size-xx-large","7": "wysiwyg-font-size-xx-large","-": "wysiwyg-font-size-smaller","+": "wysiwyg-font-size-larger" }; return function(attributeValue) { return mapping[String(attributeValue) .charAt(0) ]; }; }) ()}; // checks if element is possibly visible var typeCeckMethods ={has_visible_contet:(function() { var txt,isVisible = false,visibleElements = ['img','video','picture','br','script','noscript','style','table','iframe','object','embed','audio','svg','input','button','select','textarea','canvas']; return function(el) { // has visible innertext. so is visible txt = (el.innerText || el.textContent) .replace(/\s/g,''); if (txt && txt.length > 0) { return true; } // matches list of visible dimensioned elements for (var i = visibleElements.length; i--;) { if (el.querySelector(visibleElements[i])) { return true; } } // try to measure dimesions in last resort. (can find only of elements in dom) if (el.offsetWidth && el.offsetWidth > 0 && el.offsetHeight && el.offsetHeight > 0) { return true; } return false; }; }) ()}; var elementHandlingMethods ={unwrap:function (element) { wysihtml5dom.unwrap(element); },remove: function (element) { element.parentNode.removeChild(element); }}
