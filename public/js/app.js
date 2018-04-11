@@ -40859,7 +40859,7 @@ var render = function() {
               _c(
                 "v-layout",
                 [
-                  _c("v-flex", { attrs: { md10: "", xs12: "" } }, [
+                  _c("v-flex", { attrs: { md12: "", xs12: "" } }, [
                     _c("img", {
                       attrs: {
                         width: "200px",
@@ -40916,7 +40916,7 @@ var render = function() {
                                 [
                                   _c(
                                     "v-flex",
-                                    { attrs: { md10: "", xs12: "" } },
+                                    { attrs: { md12: "", xs12: "" } },
                                     [
                                       _c(
                                         "h4",
@@ -40933,7 +40933,7 @@ var render = function() {
                                     "v-flex",
                                     {
                                       staticStyle: { padding: "0 10px 0 0" },
-                                      attrs: { xs12: "", md5: "" }
+                                      attrs: { xs12: "", md6: "" }
                                     },
                                     [
                                       _c("v-text-field", {
@@ -40959,7 +40959,7 @@ var render = function() {
                                     "v-flex",
                                     {
                                       staticStyle: { padding: "0 10px 0 0" },
-                                      attrs: { xs12: "", md5: "" }
+                                      attrs: { xs12: "", md6: "" }
                                     },
                                     [
                                       _c("v-text-field", {
@@ -40985,7 +40985,7 @@ var render = function() {
                                     "v-flex",
                                     {
                                       staticStyle: { padding: "0 10px 0 0" },
-                                      attrs: { xs12: "", md5: "" }
+                                      attrs: { xs12: "", md6: "" }
                                     },
                                     [
                                       _c("v-checkbox", {
@@ -41043,7 +41043,7 @@ var render = function() {
                                     "v-flex",
                                     {
                                       staticStyle: { padding: "0 10px 0 0" },
-                                      attrs: { xs12: "", md5: "" }
+                                      attrs: { xs12: "", md6: "" }
                                     },
                                     [
                                       _c("v-select", {
@@ -41084,7 +41084,7 @@ var render = function() {
                                     "v-flex",
                                     {
                                       staticStyle: { padding: "0 10px 0 0" },
-                                      attrs: { xs12: "", md5: "" }
+                                      attrs: { xs12: "", md6: "" }
                                     },
                                     [
                                       _c("v-text-field", {
@@ -41114,7 +41114,7 @@ var render = function() {
                                     "v-flex",
                                     {
                                       staticStyle: { padding: "0 10px 0 0" },
-                                      attrs: { xs12: "", md5: "" }
+                                      attrs: { xs12: "", md6: "" }
                                     },
                                     [
                                       _c("v-text-field", {
@@ -41144,7 +41144,7 @@ var render = function() {
                                     "v-flex",
                                     {
                                       staticStyle: { padding: "0 10px 0 0" },
-                                      attrs: { xs12: "", md5: "" }
+                                      attrs: { xs12: "", md6: "" }
                                     },
                                     [
                                       _c("v-text-field", {
@@ -41168,7 +41168,7 @@ var render = function() {
                                     "v-flex",
                                     {
                                       staticStyle: { padding: "0 10px 0 0" },
-                                      attrs: { xs12: "", md5: "" }
+                                      attrs: { xs12: "", md6: "" }
                                     },
                                     [
                                       _c("v-text-field", {
@@ -41196,7 +41196,7 @@ var render = function() {
                                     "v-flex",
                                     {
                                       staticStyle: { margin: "0 10px 0 0" },
-                                      attrs: { xs12: "", md5: "" }
+                                      attrs: { xs12: "", md6: "" }
                                     },
                                     [
                                       _c("v-text-field", {
@@ -41216,7 +41216,7 @@ var render = function() {
                                     1
                                   ),
                                   _vm._v(" "),
-                                  _c("v-flex", { attrs: { xs10: "" } }, [
+                                  _c("v-flex", { attrs: { xs12: "" } }, [
                                     _c("h4", { staticClass: "primary--text" }, [
                                       _c("div", [
                                         _c(
@@ -41234,7 +41234,7 @@ var render = function() {
                                   _vm._v(" "),
                                   _c(
                                     "v-flex",
-                                    { attrs: { xs12: "", md10: "" } },
+                                    { attrs: { xs12: "", md12: "" } },
                                     [
                                       _c("v-select", {
                                         attrs: {
@@ -41260,7 +41260,7 @@ var render = function() {
                                   _vm._v(" "),
                                   _c(
                                     "v-flex",
-                                    { attrs: { xs12: "", md10: "" } },
+                                    { attrs: { xs12: "", md12: "" } },
                                     [
                                       _c(
                                         "v-btn",
@@ -41274,7 +41274,7 @@ var render = function() {
                                         },
                                         [
                                           _vm._v(
-                                            "\n                                    calcular "
+                                            "\n                                    calcular\n                                    "
                                           ),
                                           _c(
                                             "v-icon",
@@ -41530,7 +41530,7 @@ var render = function() {
                                     },
                                     [
                                       _vm._v(
-                                        "Este resultado solo es un estimado del costo real, los precios pueden variar dependiendo de factores no calculados"
+                                        "Este resultado solo es un estimado del\n                                costo real, los precios pueden variar dependiendo de factores no calculados"
                                       )
                                     ]
                                   ),
@@ -41602,7 +41602,11 @@ var render = function() {
                                           attrs: { type: "button" },
                                           on: { click: _vm.changeToStepOne }
                                         },
-                                        [_vm._v("Recalcular")]
+                                        [
+                                          _vm._v(
+                                            "\n                                Recalcular\n                            "
+                                          )
+                                        ]
                                       )
                                     : _vm._e()
                                 ]
@@ -41626,45 +41630,25 @@ var render = function() {
       _vm._v(" "),
       _c(
         "v-footer",
-        { attrs: { height: "auto" } },
+        { staticClass: "green darken-1 footer1", attrs: { height: "auto" } },
         [
           _c(
-            "v-card",
-            {
-              staticClass: "indigo lighten-1 white--text text-xs-center",
-              attrs: { flat: "", tile: "" }
-            },
+            "v-card-text",
+            { staticClass: "white--text green darken-4" },
             [
               _c(
-                "v-card-text",
-                _vm._l(_vm.icons, function(icon) {
-                  return _c(
-                    "v-btn",
-                    {
-                      key: icon,
-                      staticClass: "mx-3 white--text",
-                      attrs: { icon: "" }
-                    },
-                    [
-                      _c("v-icon", { attrs: { size: "24px" } }, [
-                        _vm._v(_vm._s(icon))
-                      ])
-                    ],
-                    1
-                  )
-                })
-              ),
-              _vm._v(" "),
-              _c("v-card-text", { staticClass: "white--text pt-0" }, [
-                _vm._v(
-                  "\n                DelCampo School, Anillo Periferico 2, TGU, Francisco Morazan, Honduras (504) 2268-1820 info@delcamposchool.org\n            "
-                )
-              ]),
-              _vm._v(" "),
-              _c("v-card-text", { staticClass: "white--text" }, [
-                _vm._v("\n                ©2018 — "),
-                _c("strong", [_vm._v("Vuetify")])
-              ])
+                "v-container",
+                [
+                  _c("v-flex", { attrs: { xs12: "", md12: "" } }, [
+                    _c("p", { staticClass: "text-xs-center" }, [
+                      _vm._v(
+                        "\n                        Copyright ©2018 — DelCampo International School S.A. de C.V All rights reserved.\n                    "
+                      )
+                    ])
+                  ])
+                ],
+                1
+              )
             ],
             1
           )
@@ -60102,7 +60086,7 @@ exports = module.exports = __webpack_require__(44)(false);
 
 
 // module
-exports.push([module.i, "\n.container {\n    max-width: 980px;\n}\n.panel {\n    outline: 1px;\n}\n.text-white {\n    color: white;\n    padding: 25px 0px;\n    margin: 0 0 25px 0;\n}\n.layout:nth-child(1) .repeate:nth-child(1) {\n    background: #A7001F;\n}\n.layout .repeate:nth-child(2) {\n    background: #376BD2;\n}\n.layout .repeate:nth-child(3) {\n    background: #3FCA46;\n}\n.pricesTag {\n    font-size: 3.5rem;\n    margin: 40px 0 60px 0;\n}\n.small_message {\n    padding-top: 45px;\n}\n.hedadTitle {\n    color: white;\n    padding: 5px 10px 0 10px;\n}\n\n", ""]);
+exports.push([module.i, "\n.container {\n    max-width: 980px;\n}\n.panel {\n    outline: 1px;\n}\n.text-white {\n    color: white;\n    padding: 25px 0px;\n    margin: 0 0 25px 0;\n}\n.layout:nth-child(1) .repeate:nth-child(1) {\n    background: #A7001F;\n}\n.layout .repeate:nth-child(2) {\n    background: #376BD2;\n}\n.layout .repeate:nth-child(3) {\n    background: #3FCA46;\n}\n.pricesTag {\n    font-size: 3.5rem;\n    margin: 40px 0 60px 0;\n}\n.small_message {\n    padding-top: 45px;\n}\n.hedadTitle {\n    color: white;\n    padding: 5px 10px 0 10px;\n}\n.footer1{\n    height: 5rem;\n    padding: 8rem 0;\n}\n\n", ""]);
 
 // exports
 

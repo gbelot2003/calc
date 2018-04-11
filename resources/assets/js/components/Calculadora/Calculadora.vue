@@ -3,9 +3,9 @@
         <main>
             <v-container>
                 <v-layout>
-                    <v-flex md10 xs12 >
+                    <v-flex md12 xs12>
                         <img width="200px" src="/images/logo_1.png" alt="logo">
-                         <h2 class="green darken-1 hedadTitle">Calculadora Virtual</h2>
+                        <h2 class="green darken-1 hedadTitle">Calculadora Virtual</h2>
 
                     </v-flex>
                 </v-layout>
@@ -17,9 +17,10 @@
                     <v-flex xd12 class="text-xs-center">
                         <v-form v-model="valid">
                             <v-layout row wrap>
-                                <v-flex md10 xs12><h4 class="primary--text text-md-left">Sobre el Estudiante</h4></v-flex>
+                                <v-flex md12 xs12><h4 class="primary--text text-md-left">Sobre el Estudiante</h4>
+                                </v-flex>
 
-                                <v-flex xs12 md5 style="padding: 0 10px 0 0;">
+                                <v-flex xs12 md6 style="padding: 0 10px 0 0;">
                                     <v-text-field
                                             label="Nombre del Alumno"
                                             v-model="custom.name"
@@ -29,7 +30,7 @@
                                     ></v-text-field>
                                 </v-flex>
 
-                                <v-flex xs12 md5 style="padding: 0 10px 0 0;">
+                                <v-flex xs12 md6 style="padding: 0 10px 0 0;">
 
                                     <v-text-field
                                             label="Apellido del Alumno"
@@ -41,7 +42,7 @@
 
                                 </v-flex>
 
-                                <v-flex xs12 md5 style="padding: 0 10px 0 0;">
+                                <v-flex xs12 md6 style="padding: 0 10px 0 0;">
                                     <v-checkbox
                                             label="¿Tiene Hijos en nuestra escuela actualmente?"
                                             v-model="custom.has_bros"
@@ -60,7 +61,7 @@
                                     </div>
                                 </v-flex>
 
-                                <v-flex xs12 md5 style="padding: 0 10px 0 0;">
+                                <v-flex xs12 md6 style="padding: 0 10px 0 0;">
                                     <v-select
                                             :items="grades"
                                             :rules="gradeRules"
@@ -72,7 +73,7 @@
 
                                 <v-flex xs10><h4 class="primary--text text-md-left">Acerca del Padres</h4></v-flex>
 
-                                <v-flex xs12 md5 style="padding: 0 10px 0 0;">
+                                <v-flex xs12 md6 style="padding: 0 10px 0 0;">
                                     <v-text-field
                                             label="Nombre de Padre/Madre"
                                             v-model="custom.parent_name"
@@ -82,7 +83,7 @@
                                     ></v-text-field>
                                 </v-flex>
 
-                                <v-flex xs12 md5 style="padding: 0 10px 0 0;">
+                                <v-flex xs12 md6 style="padding: 0 10px 0 0;">
                                     <v-text-field
                                             label="Apellido de Padre/Madre"
                                             v-model="custom.parent_last"
@@ -92,16 +93,16 @@
                                     ></v-text-field>
                                 </v-flex>
 
-                                <v-flex xs12 md5 style="padding: 0 10px 0 0;">
+                                <v-flex xs12 md6 style="padding: 0 10px 0 0;">
                                     <v-text-field label="Telefono" :mask="mask" v-model="custom.phone"></v-text-field>
                                 </v-flex>
 
-                                <v-flex xs12 md5 style="padding: 0 10px 0 0;">
+                                <v-flex xs12 md6 style="padding: 0 10px 0 0;">
                                     <v-text-field label="Telefono Adicional" :mask="mask"
                                                   v-model="custom.phone_aditional"></v-text-field>
                                 </v-flex>
 
-                                <v-flex xs12 md5 style="margin: 0 10px 0 0;">
+                                <v-flex xs12 md6 style="margin: 0 10px 0 0;">
                                     <v-text-field
                                             label="E-mail"
                                             v-model="custom.email"
@@ -109,7 +110,7 @@
                                     ></v-text-field>
                                 </v-flex>
 
-                                <v-flex xs10>
+                                <v-flex xs12>
                                     <h4 class="primary--text">
                                         <div>
                                             <p class="text-md-left">¡Gracias por contactarnos! Nos preguntabamos...</p>
@@ -117,7 +118,7 @@
                                     </h4>
                                 </v-flex>
 
-                                <v-flex xs12 md10>
+                                <v-flex xs12 md12>
 
                                     <v-select
                                             :items="questions"
@@ -127,13 +128,14 @@
                                     </v-select>
                                 </v-flex>
 
-                                <v-flex xs12 md10>
+                                <v-flex xs12 md12>
                                     <v-btn large
                                            color="success"
                                            @click="submit"
                                            :disabled="!valid"
                                     >
-                                        calcular <v-icon right dark>send</v-icon>
+                                        calcular
+                                        <v-icon right dark>send</v-icon>
                                     </v-btn>
                                 </v-flex>
 
@@ -167,7 +169,8 @@
                                 </P>
 
                                 <h3 class="text-xs-center pricesTag" style="color: #B71C1C">
-                                    {{ prices[0].total.toLocaleString('en-US', { style: 'currency', currency: 'USD' })   }}
+                                    {{ prices[0].total.toLocaleString('en-US', { style: 'currency', currency: 'USD' })
+                                    }}
                                 </h3>
                             </v-flex>
 
@@ -178,7 +181,8 @@
                                 </P>
 
                                 <h3 class="text-xs-center pricesTag" style="color: #1565C0">
-                                    {{ prices[1].total.toLocaleString('en-US', { style: 'currency', currency: 'USD' })   }}
+                                    {{ prices[1].total.toLocaleString('en-US', { style: 'currency', currency: 'USD' })
+                                    }}
                                 </h3>
                             </v-flex>
 
@@ -189,15 +193,17 @@
                                 </P>
 
                                 <h3 class=" text-xs-center pricesTag" style="color:#43A047">
-                                    {{ prices[2].total.toLocaleString('en-US', { style: 'currency', currency: 'USD' })   }}
+                                    {{ prices[2].total.toLocaleString('en-US', { style: 'currency', currency: 'USD' })
+                                    }}
                                 </h3>
                             </v-flex>
 
                             <v-flex md12 class="text-xs-center">
-                                <p class="small_message" style="color:#E65100">Este resultado solo es un estimado del costo real, los precios pueden variar dependiendo de factores no calculados</p>
-                                <hr />
-                                <br />
-                                <br />
+                                <p class="small_message" style="color:#E65100">Este resultado solo es un estimado del
+                                    costo real, los precios pueden variar dependiendo de factores no calculados</p>
+                                <hr/>
+                                <br/>
+                                <br/>
                             </v-flex>
 
                             <v-flex xs12><h1 class="text-xs-center">PLANES DE PAGO DISPONIBLES</h1></v-flex>
@@ -234,7 +240,9 @@
 
 
                             <v-flex xs12 text-xs-center>
-                                <button type="button" v-if="loader === false" class="btn" @click="changeToStepOne">Recalcular</button>
+                                <button type="button" v-if="loader === false" class="btn" @click="changeToStepOne">
+                                    Recalcular
+                                </button>
                             </v-flex>
                         </v-layout>
 
@@ -243,28 +251,20 @@
                 </v-layout>
             </v-container>
         </main>
-        <v-footer height="auto">
-            <v-card
-                    flat
-                    tile
-                    class="indigo lighten-1 white--text text-xs-center"
-            >
-                <v-card-text>
-                    <v-btn
-                            v-for="icon in icons"
-                            :key="icon"
-                            icon
-                            class="mx-3 white--text"
-                    >
-                        <v-icon size="24px">{{ icon }}</v-icon>
-                    </v-btn>
-                </v-card-text>
-                <v-card-text class="white--text pt-0">
-                    DelCampo School, Anillo Periferico 2, TGU, Francisco Morazan, Honduras (504) 2268-1820 info@delcamposchool.org
-                </v-card-text>
-                <v-card-text class="white--text">
-                    &copy;2018 — <strong>Vuetify</strong>
-                </v-card-text>
+
+        <v-footer height="auto" class="green darken-1 footer1">
+
+            <v-card-text class="white--text green darken-4">
+                <v-container>
+                    <v-flex xs12 md12>
+                        <p class="text-xs-center">
+                            Copyright &copy;2018 — DelCampo International School S.A. de C.V All rights reserved.
+                        </p>
+                    </v-flex>
+
+                </v-container>
+            </v-card-text>
+
             </v-card>
         </v-footer>
     </v-app>
@@ -450,6 +450,11 @@
     .hedadTitle {
         color: white;
         padding: 5px 10px 0 10px;
+    }
+
+    .footer1{
+        height: 5rem;
+        padding: 8rem 0;
     }
 
 </style>
