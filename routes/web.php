@@ -25,7 +25,7 @@ Route::group(array('prefix' => 'admin'), function(){
     Route::get('/dashboard', 'DashboardController@index')->name('admin.dashboard');
     Route::get('/dashboard/export/excel/{buscar}/{desde}/{hasta}', 'ExcelController@getExportExcel')->name('admin.excel');
     Route::get('/dashboard/delete/{id}', 'DashboardController@delete')->name('admin.dashboard.delete');
-    //Route::get('/dashboard/delete/all', 'DashboardController@deleteAll')->name('admin.dashboard.deleteAll');
+    Route::get('/dashboard/deleteit/all', 'DashboardController@deleteAll')->name('admin.dashboard.deleteAll');
 
     Route::get('/grades', 'GradesAdminController@index')->name('admin.grades');
     Route::post('/grades/update', 'GradesAdminController@updateGrades');

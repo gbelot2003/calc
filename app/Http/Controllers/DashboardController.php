@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Custom;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use DB;
 
 class DashboardController extends Controller
 {
@@ -78,7 +79,7 @@ class DashboardController extends Controller
 
     public function deleteAll()
     {
-        DB::table('table_name')->truncate();
+        DB::table('customs')->truncate();
         flash('Registro Eliminado.')->warning();
         return redirect()->to(route('admin.dashboard'));
     }
