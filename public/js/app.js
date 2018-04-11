@@ -40988,13 +40988,11 @@ var render = function() {
                                       attrs: { xs12: "", md6: "" }
                                     },
                                     [
-                                      _c("v-checkbox", {
+                                      _c("v-switch", {
                                         attrs: {
-                                          label:
-                                            "¿Tiene Hijos en nuestra escuela actualmente?",
+                                          label: "¿Tiene hijos actualmente?",
                                           color: "primary",
-                                          value: "1",
-                                          "hide-details": ""
+                                          value: "1"
                                         },
                                         model: {
                                           value: _vm.custom.has_bros,

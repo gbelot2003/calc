@@ -43,13 +43,13 @@
                                 </v-flex>
 
                                 <v-flex xs12 md6 style="padding: 0 10px 0 0;">
-                                    <v-checkbox
-                                            label="¿Tiene Hijos en nuestra escuela actualmente?"
+
+                                    <v-switch
+                                            :label="`¿Tiene hijos actualmente?`"
                                             v-model="custom.has_bros"
                                             color="primary"
                                             value="1"
-                                            hide-details
-                                    ></v-checkbox>
+                                    ></v-switch>
 
                                     <div v-if="custom.has_bros">
                                         <v-select
