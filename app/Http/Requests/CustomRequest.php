@@ -31,7 +31,7 @@ class CustomRequest extends FormRequest
             'bros' => 'nullable',
             'parent_name' => 'string|required',
             'parent_last' => 'string|required',
-            'phone_aditional' => 'string',
+            'phone_aditional' => 'string | nullable',
             'phone' => 'string|required',
             'email' => 'email',
             'question' => 'string | nullable',

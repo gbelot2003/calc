@@ -289,21 +289,8 @@
 
     Vue.use(VeeValidate);
 
-    const dictionary = {
-        en: {
-            messages:{
-                required: () => 'Este Campo es Obligatorio'
-            }
-        },
-        es: {
-            messages: {
-                required: () => 'Este Campo es Obligatorio'
-            }
-        }
-    };
 
     VeeValidate.Validator.updateDictionary(dictionary);
-
 
     export default {
         data () {

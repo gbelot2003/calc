@@ -1,4 +1,3 @@
-
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -9,8 +8,22 @@ require('./bootstrap');
 
 
 window.Vue = require('vue');
-import vSelect from 'vue-select'
-import VueMask from 'v-mask';
+
+
+import Vuetify from 'vuetify';
+import colors from 'vuetify/es5/util/colors'
+Vue.use(Vuetify, {
+    theme: {
+        primary: colors.cyan.darken4,
+        secondary: colors.cyan.darken3,
+        accent: colors.cyan.accent4,
+        error: colors.red.base,
+        warning: colors.lime.darken2,
+        info: colors.teal.darken2,
+        success: colors.green.base
+    }
+});
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -18,13 +31,11 @@ import VueMask from 'v-mask';
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('v-select', vSelect);
-Vue.component('calculadora', require('./components/Calculadora.vue'));
+//Vue.component('v-select', vSelect);
+Vue.component('calculadora', require('./components/Calculadora/Calculadora.vue'));
 
 
-
-
-Vue.use(VueMask);
+//Vue.use(VueMask);
 
 const app = new Vue({
     el: '#app'
