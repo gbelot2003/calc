@@ -17,7 +17,8 @@
                     <v-flex xd12 class="text-xs-center">
                         <v-form v-model="valid">
                             <v-layout row wrap>
-                                <v-flex md12 xs12><h4 class="primary--text text-md-left">Sobre el Estudiante</h4>
+                                <v-flex md12 xs12>
+                                  <h4 class="green1 text-sm-centar text-md-left">Sobre el Estudiante</h4>
                                 </v-flex>
 
                                 <v-flex xs12 md6 style="padding: 0 10px 0 0;">
@@ -71,7 +72,7 @@
                                     </v-select>
                                 </v-flex>
 
-                                <v-flex xs10><h4 class="primary--text text-md-left">Acerca del Padres</h4></v-flex>
+                                <v-flex xs10><h4 class="green1 text-md-left">Acerca del Padres</h4></v-flex>
 
                                 <v-flex xs12 md6 style="padding: 0 10px 0 0;">
                                     <v-text-field
@@ -111,7 +112,7 @@
                                 </v-flex>
 
                                 <v-flex xs12>
-                                    <h4 class="primary--text">
+                                    <h4 class="green1">
                                         <div>
                                             <p class="text-md-left">¡Gracias por contactarnos! Nos preguntabamos...</p>
                                         </div>
@@ -254,7 +255,7 @@
 
         <v-footer height="auto" class="green darken-1 footer1">
 
-            <v-card-text class="white--text green darken-4">
+            <v-card-text class="white--text green darken-1">
                 <v-container>
                     <v-flex xs12 md12>
                         <p class="text-xs-center">
@@ -451,6 +452,10 @@
         color: white;
         padding: 5px 10px 0 10px;
     }
+
+    .green1{
+        color: #43A047;
+      }
 
     .footer1{
         height: 5rem;
