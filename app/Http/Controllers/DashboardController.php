@@ -74,4 +74,12 @@ class DashboardController extends Controller
         flash('Registro Eliminado.')->warning();
         return redirect()->to( route( 'admin.dashboard' ) );
     }
+
+
+    public function deleteAll()
+    {
+        DB::table('table_name')->truncate();
+        flash('Registro Eliminado.')->warning();
+        return redirect()->to(route('admin.dashboard'));
+    }
 }
