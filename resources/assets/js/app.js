@@ -12,15 +12,33 @@ window.Vue = require('vue');
 
 import Vuetify from 'vuetify';
 import colors from 'vuetify/es5/util/colors'
+
+const green2 = Object.freeze({
+    base: '#2A5319',
+    lighten5: '#e8f5e9',
+    lighten4: '#c8e6c9',
+    lighten3: '#a5d6a7',
+    lighten2: '#81c784',
+    lighten1: '#66bb6a',
+    darken1: '#43a047',
+    darken2: '#388e3c',
+    darken3: '#2e7d32',
+    darken4: '#1b5e20',
+    accent1: '#b9f6ca',
+    accent2: '#69f0ae',
+    accent3: '#00e676',
+    accent4: '#00c853'
+})
+
 Vue.use(Vuetify, {
     theme: {
-        primary: colors.cyan.darken4,
-        secondary: colors.cyan.darken3,
+        primary: green2.base,
+        secondary: green2.base,
         accent: colors.cyan.accent4,
         error: colors.red.base,
         warning: colors.lime.darken2,
         info: colors.teal.darken2,
-        success: colors.green.base
+        success: green2.base
     }
 });
 

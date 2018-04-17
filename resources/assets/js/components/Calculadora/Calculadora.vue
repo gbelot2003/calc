@@ -5,7 +5,7 @@
                 <v-layout>
                     <v-flex md12 xs12>
                         <img width="200px" src="/images/logo_1.png" alt="logo">
-                        <h2 class="green darken-1 hedadTitle">Calculadora Virtual</h2>
+                        <h2 class="hedadTitle" style="background-color: #2A5319">Calculadora Virtual</h2>
 
                     </v-flex>
                 </v-layout>
@@ -128,7 +128,7 @@
                                     <v-select
                                             :items="questions"
                                             v-model="custom.question"
-                                            label="¿Como escucho sobre DCIS?"
+                                            label="¿Como escucho sobre DCS?"
                                             single-line>
                                     </v-select>
                                 </v-flex>
@@ -245,9 +245,15 @@
 
 
                             <v-flex xs12 text-xs-center>
-                                <button type="button" v-if="loader === false" class="btn  large" @click="changeToStepOne">
+                                <v-btn large
+                                       color="success"
+                                       @click="changeToStepOne"
+                                       :disabled="!valid"
+                                       v-if="loader === false"
+                                >
                                     Recalcular
-                                </button>
+                                    <v-icon right dark>send</v-icon>
+                                </v-btn>
                             </v-flex>
                         </v-layout>
 
@@ -256,10 +262,9 @@
                 </v-layout>
             </v-container>
         </main>
+        <v-footer height="auto" class="footer1" style="background-color: #2A5319">
 
-        <v-footer height="auto" class="green darken-1 footer1">
-
-            <v-card-text class="white--text green darken-1">
+            <v-card-text class="white--text">
                 <v-container>
                     <v-flex xs12 md12>
                         <p class="text-xs-center">
@@ -314,7 +319,7 @@
                 'Alumni (egresado/a)',
                 'Otros'],
 
-            mask: 'phone',
+            mask: '(###)####-####',
 
             grades: [
                 {text: 'Toodler', id: 1},
@@ -417,8 +422,13 @@
 </script>
 
 <style>
+
+    @import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+
     .container {
         max-width: 980px;
+        font-family: 'Montserrat', sans-serif;
     }
 
     .panel {
@@ -458,12 +468,12 @@
     }
 
     .green1{
-        color: #43A047;
+        color: #2A5319;
       }
 
     .footer1{
         height: 5rem;
-        padding: 8rem 0;
+        padding: 3rem 0;
     }
 
     .loader {
