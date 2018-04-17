@@ -332,17 +332,17 @@
             ],
 
             custom: {
-                name: 'Samuel',
-                last: 'Belot',
+                name: '',
+                last: '',
                 has_bros: 0,
                 bros: 0,
-                grade_id: {text: 'Primer Grado', id: 5},
-                parent_name: 'Gerardo',
-                parent_last: 'Belot',
-                phone: '(504) 2222-22323',
+                grade_id: {},
+                parent_name: '',
+                parent_last: '',
+                phone: '',
                 phone_aditional: '',
-                email: 'gbelot@yahoo.com',
-                question: 'Amistades'
+                email: '',
+                question: ''
             },
             prices: {},
             labels: ['Normal', '', 'Credomatic Economia 7% Descuento', 'Debito Actomatico'],

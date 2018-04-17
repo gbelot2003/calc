@@ -46499,7 +46499,7 @@ function Vuetify(Vue, args) {
   }, args));
 }
 
-Vuetify.version = '1.0.14';
+Vuetify.version = '1.0.13';
 
 if (typeof window !== 'undefined' && window.Vue) {
   window.Vue.use(Vuetify);
@@ -56837,12 +56837,7 @@ __WEBPACK_IMPORTED_MODULE_0__VTabs__["a" /* default */].install = function insta
       tabsContainer: null,
       tabs: [],
       tabItems: null,
-      transitionTime: 300,
-      widths: {
-        bar: 0,
-        container: 0,
-        wrapper: 0
-      }
+      transitionTime: 300
     };
   },
 
@@ -56866,12 +56861,15 @@ __WEBPACK_IMPORTED_MODULE_0__VTabs__["a" /* default */].install = function insta
     },
     checkNextIcon: function checkNextIcon() {
       // Check one scroll ahead to know the width of right-most item
-      return this.widths.container > this.scrollOffset + this.widths.wrapper;
+      var container = this.$refs.container;
+      var wrapper = this.$refs.wrapper;
+
+      return container.clientWidth > this.scrollOffset + wrapper.clientWidth;
     },
     callSlider: function callSlider() {
       var _this = this;
 
-      this.setWidths();
+      this.setOverflow();
       if (this.hideSlider || !this.activeTab) return false;
 
       // Give screen time to paint
@@ -56911,16 +56909,7 @@ __WEBPACK_IMPORTED_MODULE_0__VTabs__["a" /* default */].install = function insta
       this.scrollOffset = this.newOffset(direction);
     },
     setOverflow: function setOverflow() {
-      this.isOverflowing = this.widths.bar < this.widths.container;
-    },
-    setWidths: function setWidths() {
-      var bar = this.$refs.bar ? this.$refs.bar.clientWidth : 0;
-      var container = this.$refs.container ? this.$refs.container.clientWidth : 0;
-      var wrapper = this.$refs.wrapper ? this.$refs.wrapper.clientWidth : 0;
-
-      this.widths = { bar: bar, container: container, wrapper: wrapper };
-
-      this.setOverflow();
+      this.isOverflowing = this.$refs.bar.clientWidth < this.$refs.container.clientWidth;
     },
     findActiveLink: function findActiveLink() {
       var _this3 = this;
@@ -56981,7 +56970,8 @@ __WEBPACK_IMPORTED_MODULE_0__VTabs__["a" /* default */].install = function insta
           clientWidth = _activeTab$$el.clientWidth,
           offsetLeft = _activeTab$$el.offsetLeft;
 
-      var totalWidth = this.widths.wrapper + this.scrollOffset;
+      var wrapperWidth = this.$refs.wrapper.clientWidth;
+      var totalWidth = wrapperWidth + this.scrollOffset;
       var itemOffset = clientWidth + offsetLeft;
       var additionalOffset = clientWidth * 0.3;
 
@@ -59120,7 +59110,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources/assets/js/components/Calculadora/Calculadora.vue"
+Component.options.__file = "resources\\assets\\js\\components\\Calculadora\\Calculadora.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -59129,9 +59119,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-04efc070", Component.options)
+    hotAPI.createRecord("data-v-f3df6a8a", Component.options)
   } else {
-    hotAPI.reload("data-v-04efc070", Component.options)
+    hotAPI.reload("data-v-f3df6a8a", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -59152,13 +59142,13 @@ var content = __webpack_require__(44);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(12)("7d130c45", content, false, {});
+var update = __webpack_require__(12)("e7bceb40", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-04efc070\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Calculadora.vue", function() {
-     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-04efc070\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Calculadora.vue");
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-f3df6a8a\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Calculadora.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-f3df6a8a\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Calculadora.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -59540,17 +59530,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             grades: [{ text: 'Toodler', id: 1 }, { text: 'Nursery', id: 2 }, { text: 'Pre Kinder', id: 3 }, { text: 'Kinder', id: 4 }, { text: 'Primer Grado', id: 5 }, { text: 'Segundo Grado', id: 6 }, { text: 'Tercer Grado', id: 7 }, { text: 'Cuarto Grado', id: 8 }, { text: 'Quinto Grado', id: 9 }, { text: 'Sexto Grado', id: 10 }, { text: 'Septimo Grado', id: 11 }, { text: 'Octavo Grado', id: 12 }, { text: 'Noveno Grado', id: 13 }, { text: 'Decimo Grado', id: 14 }, { text: 'Onceavo Grado', id: 15 }, { text: 'Doceavo Grado', id: 16 }],
 
             custom: {
-                name: 'Samuel',
-                last: 'Belot',
+                name: '',
+                last: '',
                 has_bros: 0,
                 bros: 0,
-                grade_id: { text: 'Primer Grado', id: 5 },
-                parent_name: 'Gerardo',
-                parent_last: 'Belot',
-                phone: '(504) 2222-22323',
+                grade_id: {},
+                parent_name: '',
+                parent_last: '',
+                phone: '',
                 phone_aditional: '',
-                email: 'gbelot@yahoo.com',
-                question: 'Amistades'
+                email: '',
+                question: ''
             },
             prices: {},
             labels: ['Normal', '', 'Credomatic Economia 7% Descuento', 'Debito Actomatico'],
@@ -59646,7 +59636,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources/assets/js/components/Calculadora/PanelOne.vue"
+Component.options.__file = "resources\\assets\\js\\components\\Calculadora\\PanelOne.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -59655,9 +59645,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-45cacc0e", Component.options)
+    hotAPI.createRecord("data-v-64ec8be6", Component.options)
   } else {
-    hotAPI.reload("data-v-45cacc0e", Component.options)
+    hotAPI.reload("data-v-64ec8be6", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -59678,13 +59668,13 @@ var content = __webpack_require__(49);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(12)("ecbb0014", content, false, {});
+var update = __webpack_require__(12)("9bb9b4c0", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-45cacc0e\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./PanelOne.vue", function() {
-     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-45cacc0e\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./PanelOne.vue");
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-64ec8be6\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./PanelOne.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-64ec8be6\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./PanelOne.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -59794,7 +59784,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-45cacc0e", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-64ec8be6", module.exports)
   }
 }
 
@@ -59824,7 +59814,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources/assets/js/components/Calculadora/PanelTwo.vue"
+Component.options.__file = "resources\\assets\\js\\components\\Calculadora\\PanelTwo.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -59833,9 +59823,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-14fb6a42", Component.options)
+    hotAPI.createRecord("data-v-7d543ccc", Component.options)
   } else {
-    hotAPI.reload("data-v-14fb6a42", Component.options)
+    hotAPI.reload("data-v-7d543ccc", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -59954,7 +59944,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-14fb6a42", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-7d543ccc", module.exports)
   }
 }
 
@@ -60779,7 +60769,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-04efc070", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-f3df6a8a", module.exports)
   }
 }
 
