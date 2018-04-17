@@ -13,10 +13,14 @@
         </main>
         <main v-if="step_1">
             <v-container fill-height>
+                <div class="loader" v-if="loader">
+                    <img class="icon-play-circle" src="/images/loader.gif">
+                </div>
                 <v-layout row wrap align-center>
                     <v-flex xd12 class="text-xs-center">
                         <v-form v-model="valid">
                             <v-layout row wrap>
+
                                 <v-flex md12 xs12>
                                   <h4 class="green1 text-sm-centar text-md-left">Sobre el Estudiante</h4>
                                 </v-flex>
@@ -354,7 +358,7 @@
         },
         methods: {
             whenReady(){
-
+                this.loader = false;
             },
             changeToStepOne(){
                 this.step_1 = true;
@@ -460,6 +464,25 @@
     .footer1{
         height: 5rem;
         padding: 8rem 0;
+    }
+
+    .loader {
+        position: absolute;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        background: white;
+        z-index: 99;
+    }
+
+    .container {
+        position: relative;
+    }
+
+    .icon-play-circle{
+        position:absolute;
+        top:40%;
+        left:40%;
     }
 
 </style>
