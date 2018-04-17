@@ -245,7 +245,7 @@
 
 
                             <v-flex xs12 text-xs-center>
-                                <button type="button" v-if="loader === false" class="btn" @click="changeToStepOne">
+                                <button type="button" v-if="loader === false" class="btn  large" @click="changeToStepOne">
                                     Recalcular
                                 </button>
                             </v-flex>
