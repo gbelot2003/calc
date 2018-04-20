@@ -502,8 +502,8 @@
     }
 
     .footer1 {
-        height: 5rem;
-        padding: 5rem 0;
+        height: 6rem;
+        padding: 6.5rem 0;
     }
 
     .loader {
