@@ -1,11 +1,10 @@
 <template>
-    <v-flex md6 sm12 xs12>
+    <v-flex md6 sm12 xs12 class="uppera">
         <h2 class="text-xs-center">{{ title }}</h2>
         <div>
             <p class="text-xs-center">{{ discountext }} US<span class="minimum-price">{{ calculatedValue.toLocaleString('en-US', { style: 'currency', currency: 'USD' }) }}</span></p>
             <P class="text-xs-center">{{ porcentext }} {{ porcent }}%</P>
         </div>
-
     </v-flex>
 </template>
 
@@ -36,5 +35,8 @@
 </script>
 
 <style>
+    .uppera {
+        margin-bottom: 15px;
+    }
 
 </style>

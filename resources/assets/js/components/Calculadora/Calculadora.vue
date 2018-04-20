@@ -5,7 +5,7 @@
                 <v-layout>
                     <v-flex md12 xs12>
                         <div style="width: 100%; text-align: center">
-                            <img width="150px" src="/images/logo_1.png" alt="logo">
+                            <img width="100px" src="/images/logo_1.png" alt="logo">
                         </div>
 
                         <h2 class="hedadTitle" style="background-color: #2A5319">Calculadora Virtual</h2>
@@ -121,7 +121,7 @@
                                     ></v-text-field>
                                 </v-flex>
 
-                                <v-flex xs12>
+                                <v-flex xs12 v-if="pregunta_a">
                                     <h4 class="green1">
                                         <div>
                                             <p class="text-md-left">¡Gracias por contactarnos! Nos preguntabamos...</p>
@@ -129,7 +129,15 @@
                                     </h4>
                                 </v-flex>
 
+                                <v-flex xs12 md12 v-if="pregunta_a">
 
+                                    <v-select
+                                            :items="questions"
+                                            v-model="custom.question"
+                                            label="¿Como escucho sobre DCS?"
+                                            single-line>
+                                    </v-select>
+                                </v-flex>
 
                                 <v-flex xs12 md12>
                                     <v-btn large
@@ -239,6 +247,8 @@
                                     context="B"
                             >
                             </panel-one>
+                            <br />
+                            <br />
                             <panel-two
                                     title="Plan 3"
                                     v-bind:value="full_price"
@@ -277,7 +287,7 @@
                 <v-container>
                     <v-flex xs12 md12>
                         <p class="text-xs-center">
-                            Copyright &copy;2018 — DelCampo International School S.A. de C.V All rights reserved.
+                            Copyright &copy;2018 — DelCampo International School S.A. de C.V. All rights reserved.
                         </p>
                     </v-flex>
 
@@ -370,6 +380,7 @@
             labels: ['Normal', '', 'Credomatic Economia 7% Descuento', 'Debito Actomatico'],
             grade_label: '',
             config_name: '',
+            pregunta_a: '',
 
         }),
         created: {},
@@ -379,6 +390,10 @@
         methods: {
             whenReady(){
                 this.loader = false;
+                axios.get('/config').
+                    then(resp => {
+                        this.pregunta_a = resp.data.pregunta_a;
+                })
             },
             changeToStepOne(){
                 this.step_1 = true;
@@ -488,7 +503,7 @@
 
     .footer1 {
         height: 5rem;
-        padding: 3rem 0;
+        padding: 5rem 0;
     }
 
     .loader {

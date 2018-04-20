@@ -21,6 +21,7 @@ class ConfiguracionesTableSeeder extends Seeder
             array (
                 'id' => 1,
                 'name' => '2019-2020',
+                'pregunta_a' => false,
                 'created_at' => '2018-04-20 09:36:20',
                 'updated_at' => '2018-04-20 16:00:53',
             ),

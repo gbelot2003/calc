@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Acme\calculos\CalculateTotales;
+use App\Configuraciones;
 use App\Custom;
 use App\Grade;
 use App\Http\Requests\CustomRequest;
@@ -30,6 +31,12 @@ class PagesController extends Controller
         $tgral = $totales->calculateTotal($custom->id);
 
         return $tgral;
+    }
+
+    public function config()
+    {
+        $config = Configuraciones::first();
+        return $config;
     }
 
     public function unactive()

@@ -14,6 +14,8 @@
 use Illuminate\Auth\Middleware\Authenticate;
 
 Route::get('/', 'PagesController@index')->name('pages.index');
+Route::get('/config', 'PagesController@config')->name('pages.config');
+
 Route::get('/cuenta-desactivada', 'PagesController@unactive')->name('pages.unactive');
 Auth::routes();
 

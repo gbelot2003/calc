@@ -11,6 +11,13 @@ class Configuraciones extends Model
      * @var array
      */
     protected $fillable = [
-        'name',
+        'name', 'pregunta_a'
+    ];
+
+    /**
+     * @var array
+     */
+    protected $casts = [
+        'pregunta_a' => 'boolean',
     ];
 }

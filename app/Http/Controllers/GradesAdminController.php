@@ -53,7 +53,15 @@ class GradesAdminController extends Controller
 
     public function updateConfig(Request $request)
     {
+        //dd($request->all());
         $config = Configuraciones::findOrFail($request->get('id'));
+
+        if($request->has('pregunta_a')){
+            $request['pregunta_a'] = true;
+        } else {
+            $request['pregunta_a'] = false;
+        }
+
         $config->update($request->all());
 
         flash('Registro actualizado.')->success();
