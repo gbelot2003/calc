@@ -24,7 +24,7 @@
                             <v-layout row wrap>
 
                                 <v-flex md12 xs12>
-                                  <h4 class="green1 text-sm-centar text-md-left">Sobre el Estudiante</h4>
+                                    <h4 class="green1 text-sm-centar text-md-left">Sobre el Estudiante</h4>
                                 </v-flex>
 
                                 <v-flex xs12 md6 style="padding: 0 10px 0 0;">
@@ -169,40 +169,51 @@
 
                         <v-layout row wrap align-center>
 
-                            <v-flex 4 panel elevation-3>
-                                <h2 class=" text-xs-center text-white red darken-4">{{ prices[0].subtitle }}</h2>
-                                <P class=" text-xs-center">
-                                    <small>{{ prices[0].title }}</small>
-                                </P>
+                            <v-flex 4 elevation-3 class="strech" >
+                                <v-card height="100%" >
+                                    <h3 class=" text-xs-center text-white red darken-4">{{ prices[0].subtitle }}</h3>
+                                    <P class=" text-xs-center">
+                                        <small>{{ prices[0].title }}</small>
+                                    </P>
 
-                                <h3 class="text-xs-center pricesTag" style="color: #B71C1C">
-                                    {{ prices[0].total.toLocaleString('en-US', { style: 'currency', currency: 'USD' })
-                                    }}
-                                </h3>
+                                    <h3 class="text-xs-center pricesTag" style="color: #B71C1C">
+                                        {{ prices[0].total.toLocaleString('en-US', { style: 'currency', currency: 'USD'
+                                        })
+                                        }}
+                                    </h3>
+                                </v-card>
                             </v-flex>
 
-                            <v-flex 4 panel elevation-3>
-                                <h2 class=" text-xs-center text-white light-blue darken-3">{{ prices[1].subtitle }}</h2>
-                                <P class="text-xs-center">
-                                    <small>{{ prices[1].title }}</small>
-                                </P>
+                            <v-flex 4 elevation-3 class="strech">
+                                <v-card height="100%">
+                                    <h3 class=" text-xs-center text-white light-blue darken-3">{{ prices[1].subtitle
+                                        }}</h3>
+                                    <P class="text-xs-center">
+                                        <small>{{ prices[1].title }}</small>
+                                    </P>
 
-                                <h3 class="text-xs-center pricesTag" style="color: #1565C0">
-                                    {{ prices[1].total.toLocaleString('en-US', { style: 'currency', currency: 'USD' })
-                                    }}
-                                </h3>
+                                    <h3 class="text-xs-center pricesTag" style="color: #1565C0">
+                                        {{ prices[1].total.toLocaleString('en-US', { style: 'currency', currency: 'USD'
+                                        })
+                                        }}
+                                    </h3>
+                                </v-card>
                             </v-flex>
 
-                            <v-flex 4 panel elevation-3>
-                                <h2 class="text-xs-center text-white green darken-1">{{ prices[2].subtitle }}</h2>
-                                <P class=" text-xs-center">
-                                    <small>{{ prices[2].title }}</small>
-                                </P>
+                            <v-flex 4 panel elevation-3 class="strech">
+                                <v-card height="100%">
+                                    <h3 class="text-xs-center text-white green darken-1">{{ prices[2].subtitle }}</h3>
+                                    <P class=" text-xs-center">
+                                        <small>{{ prices[2].title }}</small>
+                                    </P>
 
-                                <h3 class=" text-xs-center pricesTag" style="color:#43A047">
-                                    {{ prices[2].total.toLocaleString('en-US', { style: 'currency', currency: 'USD' })
-                                    }}
-                                </h3>
+                                    <h3 class=" text-xs-center pricesTag" style="color:#43A047">
+                                        {{ prices[2].total.toLocaleString('en-US', { style: 'currency', currency: 'USD'
+                                        })
+                                        }}
+                                    </h3>
+                                </v-card>
+
                             </v-flex>
 
                             <v-flex md12 class="text-xs-center">
@@ -343,16 +354,16 @@
             ],
 
             custom: {
-                name: '',
-                last: '',
+                name: 'asdasd',
+                last: 'asdasda',
                 has_bros: 0,
                 bros: 0,
-                grade_id: {},
-                parent_name: '',
-                parent_last: '',
-                phone: '',
+                grade_id: {text: 'Pre Kinder', id: 3},
+                parent_name: 'asdasd',
+                parent_last: 'asdasda',
+                phone: '55555555555',
                 phone_aditional: '',
-                email: '',
+                email: 'info@info.com',
                 question: ''
             },
             prices: {},
@@ -430,7 +441,6 @@
 
     @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
-
     .container {
         max-width: 980px;
         font-family: 'Montserrat', sans-serif;
@@ -472,11 +482,11 @@
         padding: 5px 10px 0 10px;
     }
 
-    .green1{
+    .green1 {
         color: #2A5319;
-      }
+    }
 
-    .footer1{
+    .footer1 {
         height: 5rem;
         padding: 3rem 0;
     }
@@ -494,10 +504,16 @@
         position: relative;
     }
 
-    .icon-play-circle{
-        position:absolute;
-        top:40%;
-        left:40%;
+    .icon-play-circle {
+        position: absolute;
+        top: 40%;
+        left: 40%;
+    }
+
+    @media all and (min-width: 1024px) {
+        .strech {
+            width : 25%;
+        }
     }
 
 </style>

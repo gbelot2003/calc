@@ -59184,7 +59184,7 @@ exports = module.exports = __webpack_require__(11)(false);
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Montserrat);", ""]);
 
 // module
-exports.push([module.i, "\n.container {\n    max-width: 980px;\n    font-family: 'Montserrat', sans-serif;\n}\n.panel {\n    outline: 1px;\n}\n.text-white {\n    color: white;\n    padding: 25px 0px;\n    margin: 0 0 25px 0;\n}\n.layout:nth-child(1) .repeate:nth-child(1) {\n    background: #A7001F;\n}\n.layout .repeate:nth-child(2) {\n    background: #376BD2;\n}\n.layout .repeate:nth-child(3) {\n    background: #3FCA46;\n}\n.pricesTag {\n    font-size: 3.5rem;\n    margin: 40px 0 60px 0;\n}\n.small_message {\n    padding-top: 45px;\n}\n.hedadTitle {\n    color: white;\n    padding: 5px 10px 0 10px;\n}\n.green1{\n    color: #2A5319;\n}\n.footer1{\n    height: 5rem;\n    padding: 3rem 0;\n}\n.loader {\n    position: absolute;\n    display: flex;\n    width: 100%;\n    height: 100%;\n    background: white;\n    z-index: 99;\n}\n.container {\n    position: relative;\n}\n.icon-play-circle{\n    position:absolute;\n    top:40%;\n    left:40%;\n}\n\n", ""]);
+exports.push([module.i, "\n.container {\n    max-width: 980px;\n    font-family: 'Montserrat', sans-serif;\n}\n.panel {\n    outline: 1px;\n}\n.text-white {\n    color: white;\n    padding: 25px 0px;\n    margin: 0 0 25px 0;\n}\n.layout:nth-child(1) .repeate:nth-child(1) {\n    background: #A7001F;\n}\n.layout .repeate:nth-child(2) {\n    background: #376BD2;\n}\n.layout .repeate:nth-child(3) {\n    background: #3FCA46;\n}\n.pricesTag {\n    font-size: 3.5rem;\n    margin: 40px 0 60px 0;\n}\n.small_message {\n    padding-top: 45px;\n}\n.hedadTitle {\n    color: white;\n    padding: 5px 10px 0 10px;\n}\n.green1 {\n    color: #2A5319;\n}\n.footer1 {\n    height: 5rem;\n    padding: 3rem 0;\n}\n.loader {\n    position: absolute;\n    display: flex;\n    width: 100%;\n    height: 100%;\n    background: white;\n    z-index: 99;\n}\n.container {\n    position: relative;\n}\n.icon-play-circle {\n    position: absolute;\n    top: 40%;\n    left: 40%;\n}\n@media all and (min-width: 1024px) {\n.strech {\n        width : 25%;\n}\n}\n\n", ""]);
 
 // exports
 
@@ -59516,6 +59516,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -59559,16 +59570,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             grades: [{ text: 'Toodler', id: 1 }, { text: 'Nursery', id: 2 }, { text: 'Pre Kinder', id: 3 }, { text: 'Kinder', id: 4 }, { text: 'Primer Grado', id: 5 }, { text: 'Segundo Grado', id: 6 }, { text: 'Tercer Grado', id: 7 }, { text: 'Cuarto Grado', id: 8 }, { text: 'Quinto Grado', id: 9 }, { text: 'Sexto Grado', id: 10 }, { text: 'Septimo Grado', id: 11 }, { text: 'Octavo Grado', id: 12 }, { text: 'Noveno Grado', id: 13 }, { text: 'Decimo Grado', id: 14 }, { text: 'Onceavo Grado', id: 15 }, { text: 'Doceavo Grado', id: 16 }],
 
             custom: {
-                name: '',
-                last: '',
+                name: 'asdasd',
+                last: 'asdasda',
                 has_bros: 0,
                 bros: 0,
-                grade_id: {},
-                parent_name: '',
-                parent_last: '',
-                phone: '',
+                grade_id: { text: 'Pre Kinder', id: 3 },
+                parent_name: 'asdasd',
+                parent_last: 'asdasda',
+                phone: '55555555555',
                 phone_aditional: '',
-                email: '',
+                email: 'info@info.com',
                 question: ''
             },
             prices: {},
@@ -60528,49 +60539,58 @@ var render = function() {
                               _c(
                                 "v-flex",
                                 {
-                                  attrs: {
-                                    "4": "",
-                                    panel: "",
-                                    "elevation-3": ""
-                                  }
+                                  staticClass: "strech",
+                                  attrs: { "4": "", "elevation-3": "" }
                                 },
                                 [
                                   _c(
-                                    "h2",
-                                    {
-                                      staticClass:
-                                        " text-xs-center text-white red darken-4"
-                                    },
-                                    [_vm._v(_vm._s(_vm.prices[0].subtitle))]
-                                  ),
-                                  _vm._v(" "),
-                                  _c("P", { staticClass: " text-xs-center" }, [
-                                    _c("small", [
-                                      _vm._v(_vm._s(_vm.prices[0].title))
-                                    ])
-                                  ]),
-                                  _vm._v(" "),
-                                  _c(
-                                    "h3",
-                                    {
-                                      staticClass: "text-xs-center pricesTag",
-                                      staticStyle: { color: "#B71C1C" }
-                                    },
+                                    "v-card",
+                                    { attrs: { height: "100%" } },
                                     [
-                                      _vm._v(
-                                        "\n                                " +
-                                          _vm._s(
-                                            _vm.prices[0].total.toLocaleString(
-                                              "en-US",
-                                              {
-                                                style: "currency",
-                                                currency: "USD"
-                                              }
-                                            )
-                                          ) +
-                                          "\n                            "
+                                      _c(
+                                        "h3",
+                                        {
+                                          staticClass:
+                                            " text-xs-center text-white red darken-4"
+                                        },
+                                        [_vm._v(_vm._s(_vm.prices[0].subtitle))]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "P",
+                                        { staticClass: " text-xs-center" },
+                                        [
+                                          _c("small", [
+                                            _vm._v(_vm._s(_vm.prices[0].title))
+                                          ])
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "h3",
+                                        {
+                                          staticClass:
+                                            "text-xs-center pricesTag",
+                                          staticStyle: { color: "#B71C1C" }
+                                        },
+                                        [
+                                          _vm._v(
+                                            "\n                                    " +
+                                              _vm._s(
+                                                _vm.prices[0].total.toLocaleString(
+                                                  "en-US",
+                                                  {
+                                                    style: "currency",
+                                                    currency: "USD"
+                                                  }
+                                                )
+                                              ) +
+                                              "\n                                "
+                                          )
+                                        ]
                                       )
-                                    ]
+                                    ],
+                                    1
                                   )
                                 ],
                                 1
@@ -60579,49 +60599,58 @@ var render = function() {
                               _c(
                                 "v-flex",
                                 {
-                                  attrs: {
-                                    "4": "",
-                                    panel: "",
-                                    "elevation-3": ""
-                                  }
+                                  staticClass: "strech",
+                                  attrs: { "4": "", "elevation-3": "" }
                                 },
                                 [
                                   _c(
-                                    "h2",
-                                    {
-                                      staticClass:
-                                        " text-xs-center text-white light-blue darken-3"
-                                    },
-                                    [_vm._v(_vm._s(_vm.prices[1].subtitle))]
-                                  ),
-                                  _vm._v(" "),
-                                  _c("P", { staticClass: "text-xs-center" }, [
-                                    _c("small", [
-                                      _vm._v(_vm._s(_vm.prices[1].title))
-                                    ])
-                                  ]),
-                                  _vm._v(" "),
-                                  _c(
-                                    "h3",
-                                    {
-                                      staticClass: "text-xs-center pricesTag",
-                                      staticStyle: { color: "#1565C0" }
-                                    },
+                                    "v-card",
+                                    { attrs: { height: "100%" } },
                                     [
-                                      _vm._v(
-                                        "\n                                " +
-                                          _vm._s(
-                                            _vm.prices[1].total.toLocaleString(
-                                              "en-US",
-                                              {
-                                                style: "currency",
-                                                currency: "USD"
-                                              }
-                                            )
-                                          ) +
-                                          "\n                            "
+                                      _c(
+                                        "h3",
+                                        {
+                                          staticClass:
+                                            " text-xs-center text-white light-blue darken-3"
+                                        },
+                                        [_vm._v(_vm._s(_vm.prices[1].subtitle))]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "P",
+                                        { staticClass: "text-xs-center" },
+                                        [
+                                          _c("small", [
+                                            _vm._v(_vm._s(_vm.prices[1].title))
+                                          ])
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "h3",
+                                        {
+                                          staticClass:
+                                            "text-xs-center pricesTag",
+                                          staticStyle: { color: "#1565C0" }
+                                        },
+                                        [
+                                          _vm._v(
+                                            "\n                                    " +
+                                              _vm._s(
+                                                _vm.prices[1].total.toLocaleString(
+                                                  "en-US",
+                                                  {
+                                                    style: "currency",
+                                                    currency: "USD"
+                                                  }
+                                                )
+                                              ) +
+                                              "\n                                "
+                                          )
+                                        ]
                                       )
-                                    ]
+                                    ],
+                                    1
                                   )
                                 ],
                                 1
@@ -60630,6 +60659,7 @@ var render = function() {
                               _c(
                                 "v-flex",
                                 {
+                                  staticClass: "strech",
                                   attrs: {
                                     "4": "",
                                     panel: "",
@@ -60638,41 +60668,53 @@ var render = function() {
                                 },
                                 [
                                   _c(
-                                    "h2",
-                                    {
-                                      staticClass:
-                                        "text-xs-center text-white green darken-1"
-                                    },
-                                    [_vm._v(_vm._s(_vm.prices[2].subtitle))]
-                                  ),
-                                  _vm._v(" "),
-                                  _c("P", { staticClass: " text-xs-center" }, [
-                                    _c("small", [
-                                      _vm._v(_vm._s(_vm.prices[2].title))
-                                    ])
-                                  ]),
-                                  _vm._v(" "),
-                                  _c(
-                                    "h3",
-                                    {
-                                      staticClass: " text-xs-center pricesTag",
-                                      staticStyle: { color: "#43A047" }
-                                    },
+                                    "v-card",
+                                    { attrs: { height: "100%" } },
                                     [
-                                      _vm._v(
-                                        "\n                                " +
-                                          _vm._s(
-                                            _vm.prices[2].total.toLocaleString(
-                                              "en-US",
-                                              {
-                                                style: "currency",
-                                                currency: "USD"
-                                              }
-                                            )
-                                          ) +
-                                          "\n                            "
+                                      _c(
+                                        "h3",
+                                        {
+                                          staticClass:
+                                            "text-xs-center text-white green darken-1"
+                                        },
+                                        [_vm._v(_vm._s(_vm.prices[2].subtitle))]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "P",
+                                        { staticClass: " text-xs-center" },
+                                        [
+                                          _c("small", [
+                                            _vm._v(_vm._s(_vm.prices[2].title))
+                                          ])
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "h3",
+                                        {
+                                          staticClass:
+                                            " text-xs-center pricesTag",
+                                          staticStyle: { color: "#43A047" }
+                                        },
+                                        [
+                                          _vm._v(
+                                            "\n                                    " +
+                                              _vm._s(
+                                                _vm.prices[2].total.toLocaleString(
+                                                  "en-US",
+                                                  {
+                                                    style: "currency",
+                                                    currency: "USD"
+                                                  }
+                                                )
+                                              ) +
+                                              "\n                                "
+                                          )
+                                        ]
                                       )
-                                    ]
+                                    ],
+                                    1
                                   )
                                 ],
                                 1
