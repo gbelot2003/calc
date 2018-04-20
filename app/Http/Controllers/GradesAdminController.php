@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Configuraciones;
 use App\Grade;
 use App\Total;
 use Illuminate\Http\Request;
@@ -14,16 +15,17 @@ class GradesAdminController extends Controller
      */
     public function __construct()
     {
-        $this->middleware( 'auth' );
-        $this->middleware( 'statusCheck' );
+        $this->middleware('auth');
+        $this->middleware('statusCheck');
     }
 
     public function index()
     {
         $grades = Grade::all();
         $totals = Total::all();
+        $config = Configuraciones::first();
         $odd = true;
-        return View( 'grades.index', compact( 'grades', 'totals', 'odd' ) );
+        return View('grades.index', compact('grades', 'totals', 'odd', 'config'));
     }
 
     /**
@@ -32,20 +34,31 @@ class GradesAdminController extends Controller
      */
     public function updateGrades(Request $request)
     {
-        $grade = Grade::findOrFail( $request->get( 'id' ) );
-        $grade->price = $request->get( 'price' );
+        $grade = Grade::findOrFail($request->get('id'));
+        $grade->price = $request->get('price');
         $grade->save();
 
-        flash( 'Registro actualizado.' )->success();
-        return redirect()->to( '/admin/grades/' );
+        flash('Registro actualizado.')->success();
+        return redirect()->to('/admin/grades/');
     }
 
     public function updateTotals(Request $request)
     {
-        $total = Total::findOrFail( $request->get( 'id' ) );
+        $total = Total::findOrFail($request->get('id'));
         $total->update($request->all());
 
-        flash( 'Registro actualizado.' )->success();
-        return redirect()->to( '/admin/grades/' );
+        flash('Registro actualizado.')->success();
+        return redirect()->to('/admin/grades/');
     }
+
+    public function updateConfig(Request $request)
+    {
+        $config = Configuraciones::findOrFail($request->get('id'));
+        $config->update($request->all());
+
+        flash('Registro actualizado.')->success();
+        return redirect()->to('/admin/grades/');
+    }
+
+
 }

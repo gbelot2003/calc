@@ -10,5 +10,8 @@
         <section class="col-lg-6 connectedSortable">
             @include('grades.panels._descuentos')
         </section>
+        <section class="col-lg-6 connectedSortable">
+            @include('grades.panels._anios')
+        </section>
     </div>
 @endsection

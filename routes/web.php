@@ -30,6 +30,7 @@ Route::group(array('prefix' => 'admin'), function(){
     Route::get('/grades', 'GradesAdminController@index')->name('admin.grades');
     Route::post('/grades/update', 'GradesAdminController@updateGrades');
     Route::post('/grades/update-totals', 'GradesAdminController@updateTotals');
+    Route::post('/grades/update-config', 'GradesAdminController@updateConfig');
 
 
     //Route::get('/family-discounts', 'FamilyDiscounAdminController@index')->name('admin.family');
