@@ -1,13 +1,17 @@
 <?php
 namespace Acme\calculos;
 
+use App\Configuraciones;
+
 class Discounts{
 
     public function getDiscountTotal($grade_id, $bros)
     {
         $calculate = new CalculateTotalDiscount();
+        $config = Configuraciones::first();
 
         return [
+            'config_name' => $config->name,
             array(
                 'subtitle' => $calculate->getDiscountSubTitle(1),
                 'title' => $calculate->getDiscountName(1),

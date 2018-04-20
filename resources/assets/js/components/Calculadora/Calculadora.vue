@@ -156,7 +156,7 @@
             <v-container fill-height>
                 <v-layout row wrap align-center>
                     <v-layout row wrap>
-                        <v-flex xs12><h1 class="text-xs-center">Precios 2017-2018</h1></v-flex>
+                        <v-flex xs12><h1 class="text-xs-center">Precios {{ config_name }}</h1></v-flex>
                         <v-flex xs12>
                             <h2>
                                 <small>Gracias</small>
@@ -357,7 +357,9 @@
             },
             prices: {},
             labels: ['Normal', '', 'Credomatic Economia 7% Descuento', 'Debito Actomatico'],
-            grade_label: ''
+            grade_label: '',
+            config_name: '',
+
         }),
         created: {},
         mounted(){
@@ -394,6 +396,7 @@
                 axios.post('/customs', toSend)
                     .then(resp => {
                         this.prices = resp.data;
+                        this.config_name = resp.data.config_name;
                         this.step_1 = false;
                         this.step_2 = true;
                         setTimeout(function () {

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Acme\calculos\Discounts;
+use App\Configuraciones;
 use App\Custom;
 use App\Grade;
 use App\Http\Requests\CustomRequest;
@@ -26,6 +27,7 @@ class CustomController extends Controller
         $custom = Custom::create($request->all());
         $totales = new Discounts();
         $tgral = $totales->getDiscountTotal($custom->grade_id, $custom->bros);
+
 
         return $tgral;
     }

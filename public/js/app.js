@@ -59573,7 +59573,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             },
             prices: {},
             labels: ['Normal', '', 'Credomatic Economia 7% Descuento', 'Debito Actomatico'],
-            grade_label: ''
+            grade_label: '',
+            config_name: ''
+
         };
     },
     created: {},
@@ -59612,6 +59614,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
             axios.post('/customs', toSend).then(function (resp) {
                 _this.prices = resp.data;
+                _this.config_name = resp.data.config_name;
                 _this.step_1 = false;
                 _this.step_2 = true;
                 setTimeout(function () {
@@ -60485,7 +60488,7 @@ var render = function() {
                         [
                           _c("v-flex", { attrs: { xs12: "" } }, [
                             _c("h1", { staticClass: "text-xs-center" }, [
-                              _vm._v("Precios 2017-2018")
+                              _vm._v("Precios " + _vm._s(_vm.config_name))
                             ])
                           ]),
                           _vm._v(" "),
