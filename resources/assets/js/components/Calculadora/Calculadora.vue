@@ -101,7 +101,11 @@
                                 </v-flex>
 
                                 <v-flex xs12 md6 style="padding: 0 10px 0 0;">
-                                    <v-text-field label="Telefono" :mask="mask" v-model="custom.phone"></v-text-field>
+                                    <v-text-field
+                                            label="Telefono"
+                                            :mask="mask"
+                                            :rules="phoneRules"
+                                            v-model="custom.phone"></v-text-field>
                                 </v-flex>
 
                                 <v-flex xs12 md6 style="padding: 0 10px 0 0;">
@@ -125,15 +129,7 @@
                                     </h4>
                                 </v-flex>
 
-                                <v-flex xs12 md12>
 
-                                    <v-select
-                                            :items="questions"
-                                            v-model="custom.question"
-                                            label="¿Como escucho sobre DCS?"
-                                            single-line>
-                                    </v-select>
-                                </v-flex>
 
                                 <v-flex xs12 md12>
                                     <v-btn large
@@ -324,6 +320,10 @@
                 v => v.length <= 30 || ''
             ],
 
+            phoneRules: [
+                v => !!v || 'El Numero de telefono es un campo necesario',
+            ],
+
             questions: [
                 'Pagina Web',
                 'Panfleto o brochure',
@@ -354,16 +354,16 @@
             ],
 
             custom: {
-                name: 'asdasd',
-                last: 'asdasda',
+                name: '',
+                last: '',
                 has_bros: 0,
                 bros: 0,
-                grade_id: {text: 'Pre Kinder', id: 3},
-                parent_name: 'asdasd',
-                parent_last: 'asdasda',
-                phone: '55555555555',
+                grade_id: {},
+                parent_name: '',
+                parent_last: '',
+                phone: '',
                 phone_aditional: '',
-                email: 'info@info.com',
+                email: '',
                 question: ''
             },
             prices: {},
