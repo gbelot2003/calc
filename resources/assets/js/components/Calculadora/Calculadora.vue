@@ -4,9 +4,11 @@
             <v-container>
                 <v-layout>
                     <v-flex md12 xs12>
-                        <img width="200px" src="/images/logo_1.png" alt="logo">
-                        <h2 class="hedadTitle" style="background-color: #2A5319">Calculadora Virtual</h2>
+                        <div style="width: 100%; text-align: center">
+                            <img width="150px" src="/images/logo_1.png" alt="logo">
+                        </div>
 
+                        <h2 class="hedadTitle" style="background-color: #2A5319">Calculadora Virtual</h2>
                     </v-flex>
                 </v-layout>
             </v-container>
@@ -27,7 +29,7 @@
 
                                 <v-flex xs12 md6 style="padding: 0 10px 0 0;">
                                     <v-text-field
-                                            label="Nombre del Alumno"
+                                            label="Nombre del Estudiante"
                                             v-model="custom.name"
                                             :rules="nameRules"
                                             :counter="30"
@@ -38,7 +40,7 @@
                                 <v-flex xs12 md6 style="padding: 0 10px 0 0;">
 
                                     <v-text-field
-                                            label="Apellido del Alumno"
+                                            label="Apellido del Estudiante"
                                             v-model="custom.last"
                                             :rules="lastRules"
                                             :counter="30"
@@ -50,7 +52,7 @@
                                 <v-flex xs12 md6 style="padding: 0 10px 0 0;">
 
                                     <v-switch
-                                            :label="`¿Tiene hijos actualmente?`"
+                                            :label="`¿Tiene hijos actualmente en DCS?`"
                                             v-model="custom.has_bros"
                                             color="primary"
                                             value="1"
@@ -76,11 +78,11 @@
                                     </v-select>
                                 </v-flex>
 
-                                <v-flex xs10><h4 class="green1 text-md-left">Acerca del Padres</h4></v-flex>
+                                <v-flex xs10><h4 class="green1 text-md-left">Acerca del Padre/Madre/Tutor</h4></v-flex>
 
                                 <v-flex xs12 md6 style="padding: 0 10px 0 0;">
                                     <v-text-field
-                                            label="Nombre de Padre/Madre"
+                                            label="Nombre del Padre/Madre/Tutor "
                                             v-model="custom.parent_name"
                                             :rules="nameRules"
                                             :counter="30"
@@ -90,7 +92,7 @@
 
                                 <v-flex xs12 md6 style="padding: 0 10px 0 0;">
                                     <v-text-field
-                                            label="Apellido de Padre/Madre"
+                                            label="Apellido del Padre/Madre/Tutor"
                                             v-model="custom.parent_last"
                                             :rules="nameRules"
                                             :counter="30"
