@@ -57,9 +57,9 @@ class GradesAdminController extends Controller
         $config = Configuraciones::findOrFail($request->get('id'));
 
         if($request->has('pregunta_a')){
-            $request['pregunta_a'] = true;
+            $request['pregunta_a'] = 1;
         } else {
-            $request['pregunta_a'] = false;
+            $request['pregunta_a'] = 0;
         }
 
         $config->update($request->all());

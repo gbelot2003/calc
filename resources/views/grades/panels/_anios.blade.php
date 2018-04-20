@@ -36,7 +36,7 @@
 
                             </div>
                             <div class="form-group col-md-5">
-                                {{ Form::checkbox('pregunta_a', $config->pregunta_a , $config->pregunta_a) }}
+                                {{ Form::checkbox('pregunta_a', true, $config->pregunta_a) }}
                                 ¿Aparece pregunta de fuente en formulario?
                             </div>
                         </div>
