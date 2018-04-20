@@ -293,22 +293,22 @@
             valid: false,
 
             nameRules: [
-                v => !!v || 'El nombre es Necesario',
-                v => v.length <= 30 || 'El Nombre debe tener menos de 10 caracteres'
+                v => !!v || 'El nombre es un campo necesario',
+                v => v.length <= 30 || 'El nombre debe tener menos de 10 caracteres'
             ],
 
             gradeRules: [
-                v => !!v || 'Selección de Grado es Necesario',
+                v => !!v || 'Selección de Grado es necesario',
             ],
 
             emailRules: [
-                v => !!v || 'E-mail is required',
-                v => /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(v) || 'E-mail must be valid'
+                v => !!v || 'El campo de e-mail es necesario',
+                v => /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(v) || 'El correo debe ser valido'
             ],
 
             lastRules: [
                 v => !!v || 'Apellido es un campo necesario',
-                v => v.length <= 30 || 'Last must be less than 10 characters'
+                v => v.length <= 30 || ''
             ],
 
             questions: [
