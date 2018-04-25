@@ -59184,7 +59184,7 @@ exports = module.exports = __webpack_require__(11)(false);
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Montserrat);", ""]);
 
 // module
-exports.push([module.i, "\n.container {\n    max-width: 980px;\n    font-family: 'Montserrat', sans-serif;\n}\n.panel {\n    outline: 1px;\n}\n.text-white {\n    color: white;\n    padding: 25px 0px;\n    margin: 0 0 25px 0;\n}\n.layout:nth-child(1) .repeate:nth-child(1) {\n    background: #A7001F;\n}\n.layout .repeate:nth-child(2) {\n    background: #376BD2;\n}\n.layout .repeate:nth-child(3) {\n    background: #3FCA46;\n}\n.pricesTag {\n    font-size: 3.5rem;\n    margin: 40px 0 60px 0;\n}\n.small_message {\n    padding-top: 45px;\n}\n.hedadTitle {\n    color: white;\n    padding: 5px 10px 0 10px;\n}\n.green1 {\n    color: #2A5319;\n}\n.footer1 {\n    height: 6rem;\n    padding: 6.5rem 0;\n}\n.loader {\n    position: absolute;\n    display: flex;\n    width: 100%;\n    height: 100%;\n    background: white;\n    z-index: 99;\n}\n.container {\n    position: relative;\n}\n.icon-play-circle {\n    position: absolute;\n    top: 40%;\n    left: 40%;\n}\n@media all and (min-width: 1024px) {\n.strech {\n        width : 25%;\n}\n}\n\n", ""]);
+exports.push([module.i, "\n.container {\n    max-width: 980px;\n    font-family: 'Montserrat', sans-serif;\n}\n.panel {\n    outline: 1px;\n}\n.text-white {\n    color: white;\n    padding: 25px 0px;\n    margin: 0 0 25px 0;\n}\n.layout:nth-child(1) .repeate:nth-child(1) {\n    background: #A7001F;\n}\n.layout .repeate:nth-child(2) {\n    background: #376BD2;\n}\n.layout .repeate:nth-child(3) {\n    background: #3FCA46;\n}\n.pricesTag {\n    font-size: 3.5rem;\n    margin: 40px 0 60px 0;\n}\n.small_message {\n    padding-top: 45px;\n}\n.hedadTitle {\n    color: white;\n    padding: 5px 10px 0 10px;\n}\n.green1 {\n    color: #2A5319;\n}\n.footer1 {\n    height: 6rem;\n    padding: 6.5rem 0;\n}\n.planesTitulo{\n    margin-bottom:3rem;\n}\n.loader {\n    position: absolute;\n    display: flex;\n    width: 100%;\n    height: 100%;\n    background: white;\n    z-index: 99;\n}\n.container {\n    position: relative;\n}\n.icon-play-circle {\n    position: absolute;\n    top: 40%;\n    left: 40%;\n}\n@media all and (min-width: 1024px) {\n.strech {\n        width : 25%;\n}\n}\n\n", ""]);
 
 // exports
 
@@ -59232,10 +59232,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__PanelOne_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__PanelOne_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__PanelTwo_vue__ = __webpack_require__(52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__PanelTwo_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__PanelTwo_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Header_vue__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Header_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__Header_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Footer_vue__ = __webpack_require__(59);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Footer_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__Footer_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__PanelThree_vue__ = __webpack_require__(65);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__PanelThree_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__PanelThree_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Header_vue__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Header_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__Header_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Footer_vue__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Footer_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__Footer_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Card_vue__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Card_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__Card_vue__);
 //
 //
 //
@@ -59500,18 +59504,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
+
 
 
 
@@ -59561,16 +59555,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             grades: [{ text: 'Toodler', id: 1 }, { text: 'Nursery', id: 2 }, { text: 'Pre Kinder', id: 3 }, { text: 'Kinder', id: 4 }, { text: 'Primer Grado', id: 5 }, { text: 'Segundo Grado', id: 6 }, { text: 'Tercer Grado', id: 7 }, { text: 'Cuarto Grado', id: 8 }, { text: 'Quinto Grado', id: 9 }, { text: 'Sexto Grado', id: 10 }, { text: 'Septimo Grado', id: 11 }, { text: 'Octavo Grado', id: 12 }, { text: 'Noveno Grado', id: 13 }, { text: 'Decimo Grado', id: 14 }, { text: 'Onceavo Grado', id: 15 }, { text: 'Doceavo Grado', id: 16 }],
 
             custom: {
-                name: '',
-                last: '',
+                name: 'Samuel',
+                last: 'Belot',
                 has_bros: 0,
                 bros: 0,
-                grade_id: {},
-                parent_name: '',
-                parent_last: '',
-                phone: '',
+                grade_id: { text: 'Decimo Grado', id: 14 },
+                parent_name: 'Gerardo',
+                parent_last: 'Belot',
+                phone: '(222)22222222',
                 phone_aditional: '',
-                email: '',
+                email: 'info@info.com',
                 question: ''
             },
             prices: {},
@@ -59645,7 +59639,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             });
         }
     },
-    components: { PanelOne: __WEBPACK_IMPORTED_MODULE_0__PanelOne_vue___default.a, PanelTwo: __WEBPACK_IMPORTED_MODULE_1__PanelTwo_vue___default.a, Header: __WEBPACK_IMPORTED_MODULE_2__Header_vue___default.a, Footer: __WEBPACK_IMPORTED_MODULE_3__Footer_vue___default.a }
+
+    components: { PanelOne: __WEBPACK_IMPORTED_MODULE_0__PanelOne_vue___default.a, PanelTwo: __WEBPACK_IMPORTED_MODULE_1__PanelTwo_vue___default.a, Header: __WEBPACK_IMPORTED_MODULE_3__Header_vue___default.a, Footer: __WEBPACK_IMPORTED_MODULE_4__Footer_vue___default.a, Card: __WEBPACK_IMPORTED_MODULE_5__Card_vue___default.a, PanelThree: __WEBPACK_IMPORTED_MODULE_2__PanelThree_vue___default.a }
 });
 
 /***/ }),
@@ -60498,189 +60493,32 @@ var render = function() {
                               attrs: { row: "", wrap: "", "align-center": "" }
                             },
                             [
-                              _c(
-                                "v-flex",
-                                {
-                                  staticClass: "strech",
-                                  attrs: { "4": "", "elevation-3": "" }
-                                },
-                                [
-                                  _c(
-                                    "v-card",
-                                    { attrs: { height: "100%" } },
-                                    [
-                                      _c(
-                                        "h3",
-                                        {
-                                          staticClass:
-                                            " text-xs-center text-white red darken-4"
-                                        },
-                                        [_vm._v(_vm._s(_vm.prices[0].subtitle))]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "P",
-                                        { staticClass: " text-xs-center" },
-                                        [
-                                          _c("small", [
-                                            _vm._v(_vm._s(_vm.prices[0].title))
-                                          ])
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "h3",
-                                        {
-                                          staticClass:
-                                            "text-xs-center pricesTag",
-                                          staticStyle: { color: "#B71C1C" }
-                                        },
-                                        [
-                                          _vm._v(
-                                            "\n                                    " +
-                                              _vm._s(
-                                                _vm.prices[0].total.toLocaleString(
-                                                  "en-US",
-                                                  {
-                                                    style: "currency",
-                                                    currency: "USD"
-                                                  }
-                                                )
-                                              ) +
-                                              "\n                                "
-                                          )
-                                        ]
-                                      )
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              ),
+                              _c("Card", {
+                                attrs: {
+                                  subtitle: _vm.prices[0].subtitle,
+                                  title: _vm.prices[0].title,
+                                  total: _vm.prices[0].total,
+                                  color: "red darken-4"
+                                }
+                              }),
                               _vm._v(" "),
-                              _c(
-                                "v-flex",
-                                {
-                                  staticClass: "strech",
-                                  attrs: { "4": "", "elevation-3": "" }
-                                },
-                                [
-                                  _c(
-                                    "v-card",
-                                    { attrs: { height: "100%" } },
-                                    [
-                                      _c(
-                                        "h3",
-                                        {
-                                          staticClass:
-                                            " text-xs-center text-white light-blue darken-3"
-                                        },
-                                        [_vm._v(_vm._s(_vm.prices[1].subtitle))]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "P",
-                                        { staticClass: "text-xs-center" },
-                                        [
-                                          _c("small", [
-                                            _vm._v(_vm._s(_vm.prices[1].title))
-                                          ])
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "h3",
-                                        {
-                                          staticClass:
-                                            "text-xs-center pricesTag",
-                                          staticStyle: { color: "#1565C0" }
-                                        },
-                                        [
-                                          _vm._v(
-                                            "\n                                    " +
-                                              _vm._s(
-                                                _vm.prices[1].total.toLocaleString(
-                                                  "en-US",
-                                                  {
-                                                    style: "currency",
-                                                    currency: "USD"
-                                                  }
-                                                )
-                                              ) +
-                                              "\n                                "
-                                          )
-                                        ]
-                                      )
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              ),
+                              _c("Card", {
+                                attrs: {
+                                  subtitle: _vm.prices[1].subtitle,
+                                  title: _vm.prices[1].title,
+                                  total: _vm.prices[1].total,
+                                  color: "light-blue darken-3"
+                                }
+                              }),
                               _vm._v(" "),
-                              _c(
-                                "v-flex",
-                                {
-                                  staticClass: "strech",
-                                  attrs: {
-                                    "4": "",
-                                    panel: "",
-                                    "elevation-3": ""
-                                  }
-                                },
-                                [
-                                  _c(
-                                    "v-card",
-                                    { attrs: { height: "100%" } },
-                                    [
-                                      _c(
-                                        "h3",
-                                        {
-                                          staticClass:
-                                            "text-xs-center text-white green darken-1"
-                                        },
-                                        [_vm._v(_vm._s(_vm.prices[2].subtitle))]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "P",
-                                        { staticClass: " text-xs-center" },
-                                        [
-                                          _c("small", [
-                                            _vm._v(_vm._s(_vm.prices[2].title))
-                                          ])
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "h3",
-                                        {
-                                          staticClass:
-                                            " text-xs-center pricesTag",
-                                          staticStyle: { color: "#43A047" }
-                                        },
-                                        [
-                                          _vm._v(
-                                            "\n                                    " +
-                                              _vm._s(
-                                                _vm.prices[2].total.toLocaleString(
-                                                  "en-US",
-                                                  {
-                                                    style: "currency",
-                                                    currency: "USD"
-                                                  }
-                                                )
-                                              ) +
-                                              "\n                                "
-                                          )
-                                        ]
-                                      )
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              ),
+                              _c("Card", {
+                                attrs: {
+                                  subtitle: _vm.prices[2].subtitle,
+                                  title: _vm.prices[2].title,
+                                  total: _vm.prices[2].total,
+                                  color: "green darken-1"
+                                }
+                              }),
                               _vm._v(" "),
                               _c(
                                 "v-flex",
@@ -60711,10 +60549,18 @@ var render = function() {
                               ),
                               _vm._v(" "),
                               _c("v-flex", { attrs: { xs12: "" } }, [
-                                _c("h1", { staticClass: "text-xs-center" }, [
-                                  _vm._v("PLANES DE PAGO DISPONIBLES")
-                                ])
+                                _c(
+                                  "h1",
+                                  {
+                                    staticClass: "text-xs-center planesTitulo"
+                                  },
+                                  [_vm._v("PLANES DE PAGO DISPONIBLES")]
+                                )
                               ]),
+                              _vm._v(" "),
+                              _c("br"),
+                              _vm._v(" "),
+                              _c("br"),
                               _vm._v(" "),
                               _c("panel-one", {
                                 attrs: {
@@ -60758,6 +60604,17 @@ var render = function() {
                                   title: "Plan 4",
                                   value: _vm.full_price,
                                   prime: "B"
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c("panel-three", {
+                                attrs: {
+                                  title: "Plan 5",
+                                  value: _vm.full_price,
+                                  discountext:
+                                    "1 Cuota pagadera en Junio US $1,000.00",
+                                  discountext2:
+                                    "1 Cuota pagadera en Diciembre US $1,000.00"
                                 }
                               }),
                               _vm._v(" "),
@@ -61102,6 +60959,351 @@ if (false) {
   module.hot.accept()
   if (module.hot.data) {
     require("vue-hot-reload-api")      .rerender("data-v-6b94a23f", module.exports)
+  }
+}
+
+/***/ }),
+/* 62 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(4)
+/* script */
+var __vue_script__ = __webpack_require__(63)
+/* template */
+var __vue_template__ = __webpack_require__(64)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources\\assets\\js\\components\\Calculadora\\Card.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-1cc5cf98", Component.options)
+  } else {
+    hotAPI.reload("data-v-1cc5cf98", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 63 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vuetify__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vuetify___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vuetify__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vuetify___default.a);
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    props: ['subtitle', 'title', 'total', 'color'],
+    data: function data() {
+        return {};
+    }
+});
+
+/***/ }),
+/* 64 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "v-flex",
+    { staticClass: "strech", attrs: { "4": "", "elevation-3": "" } },
+    [
+      _c(
+        "v-card",
+        { attrs: { height: "100%" } },
+        [
+          _c(
+            "h3",
+            { staticClass: "text-xs-center text-white", class: _vm.color },
+            [_vm._v(_vm._s(_vm.subtitle))]
+          ),
+          _vm._v(" "),
+          _c("P", { staticClass: " text-xs-center" }, [
+            _c("small", [_vm._v(_vm._s(_vm.title))])
+          ]),
+          _vm._v(" "),
+          _c(
+            "h3",
+            {
+              staticClass: "text-xs-center pricesTag",
+              staticStyle: { color: "#B71C1C" }
+            },
+            [
+              _vm._v(
+                "\n            " +
+                  _vm._s(
+                    _vm.total.toLocaleString("en-US", {
+                      style: "currency",
+                      currency: "USD"
+                    })
+                  ) +
+                  "\n        "
+              )
+            ]
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-1cc5cf98", module.exports)
+  }
+}
+
+/***/ }),
+/* 65 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(66)
+}
+var normalizeComponent = __webpack_require__(4)
+/* script */
+var __vue_script__ = __webpack_require__(68)
+/* template */
+var __vue_template__ = __webpack_require__(69)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources\\assets\\js\\components\\Calculadora\\PanelThree.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-5e844d1e", Component.options)
+  } else {
+    hotAPI.reload("data-v-5e844d1e", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 66 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(67);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(12)("d3aff052", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-5e844d1e\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./PanelThree.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-5e844d1e\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./PanelThree.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 67 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(11)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.uppera {\n    margin-bottom: 15px;\n}\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 68 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    props: ['title', 'value', 'discountext', 'context', 'discountext2'],
+    data: function data() {
+        return {};
+    },
+
+    methods: {
+        calculatePorcent: function calculatePorcent(val) {
+            return (val - 2000) / 10;
+        }
+    },
+    computed: {
+        calculatedValue: function calculatedValue() {
+            var discount = this.calculatePorcent(this.value);
+            return discount;
+        }
+    }
+});
+
+/***/ }),
+/* 69 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "v-container",
+    { attrs: { "grid-list-xl": "", "text-xs-center": "" } },
+    [
+      _c(
+        "v-layout",
+        { attrs: { row: "", wrap: "" } },
+        [
+          _c("v-flex", { attrs: { md8: "", "offset-md2": "", xs12: "" } }, [
+            _c("h2", { staticClass: "text-xs-center" }, [
+              _vm._v(_vm._s(_vm.title))
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              [
+                _c("p", { staticClass: "text-xs-center" }, [
+                  _vm._v(_vm._s(_vm.discountext))
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "text-xs-center" }, [
+                  _vm._v(_vm._s(_vm.discountext2))
+                ]),
+                _vm._v(" "),
+                _c("P", { staticClass: "text-xs-center" }, [
+                  _vm._v("10 cuotas mensuales de "),
+                  _c("strong", [
+                    _vm._v("US $" + _vm._s(_vm.calculatedValue) + ".00")
+                  ])
+                ])
+              ],
+              1
+            )
+          ])
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-5e844d1e", module.exports)
   }
 }
 

@@ -1,0 +1,45 @@
+<template>
+    <v-container grid-list-xl text-xs-center>
+        <v-layout row wrap>
+
+            <v-flex md8 offset-md2 xs12>
+                <h2 class="text-xs-center">{{ title }}</h2>
+                <div>
+                    <p class="text-xs-center">{{ discountext }}</span></p>
+                    <p class="text-xs-center">{{ discountext2 }}</span></p>
+                    <P class="text-xs-center">10 cuotas mensuales de <strong>US ${{ calculatedValue }}.00</strong></P>
+                </div>
+            </v-flex>
+        </v-layout>
+    </v-container>
+
+</template>
+
+<script>
+    import Vue from 'vue';
+
+    export default {
+        props: ['title', 'value', 'discountext', 'context', 'discountext2'],
+        data(){
+            return {}
+        },
+        methods: {
+            calculatePorcent(val){
+                return (val - 2000) / 10
+            }
+        },
+        computed: {
+            calculatedValue(){
+                let discount = this.calculatePorcent(this.value);
+                return discount;
+            }
+        }
+    }
+</script>
+
+<style>
+    .uppera {
+        margin-bottom: 15px;
+    }
+
+</style>

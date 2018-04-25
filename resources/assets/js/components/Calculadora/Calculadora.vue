@@ -1,6 +1,8 @@
 <template>
     <v-app>
+
         <Header></Header>
+
         <main v-if="step_1">
             <v-container fill-height>
                 <div class="loader" v-if="loader">
@@ -161,53 +163,28 @@
                         </v-flex>
 
                         <v-layout row wrap align-center>
+                            <Card
+                                    v-bind:subtitle="prices[0].subtitle"
+                                    v-bind:title="prices[0].title"
+                                    v-bind:total="prices[0].total"
+                                    color="red darken-4">
+                            </Card>
 
-                            <v-flex 4 elevation-3 class="strech" >
-                                <v-card height="100%" >
-                                    <h3 class=" text-xs-center text-white red darken-4">{{ prices[0].subtitle }}</h3>
-                                    <P class=" text-xs-center">
-                                        <small>{{ prices[0].title }}</small>
-                                    </P>
+                            <Card
+                                    v-bind:subtitle="prices[1].subtitle"
+                                    v-bind:title="prices[1].title"
+                                    v-bind:total="prices[1].total"
+                                    color="light-blue darken-3">
+                            </Card>
 
-                                    <h3 class="text-xs-center pricesTag" style="color: #B71C1C">
-                                        {{ prices[0].total.toLocaleString('en-US', { style: 'currency', currency: 'USD'
-                                        })
-                                        }}
-                                    </h3>
-                                </v-card>
-                            </v-flex>
+                            <Card
+                                    v-bind:subtitle="prices[2].subtitle"
+                                    v-bind:title="prices[2].title"
+                                    v-bind:total="prices[2].total"
+                                    color="green darken-1">
+                            </Card>
 
-                            <v-flex 4 elevation-3 class="strech">
-                                <v-card height="100%">
-                                    <h3 class=" text-xs-center text-white light-blue darken-3">{{ prices[1].subtitle
-                                        }}</h3>
-                                    <P class="text-xs-center">
-                                        <small>{{ prices[1].title }}</small>
-                                    </P>
 
-                                    <h3 class="text-xs-center pricesTag" style="color: #1565C0">
-                                        {{ prices[1].total.toLocaleString('en-US', { style: 'currency', currency: 'USD'
-                                        })
-                                        }}
-                                    </h3>
-                                </v-card>
-                            </v-flex>
-
-                            <v-flex 4 panel elevation-3 class="strech">
-                                <v-card height="100%">
-                                    <h3 class="text-xs-center text-white green darken-1">{{ prices[2].subtitle }}</h3>
-                                    <P class=" text-xs-center">
-                                        <small>{{ prices[2].title }}</small>
-                                    </P>
-
-                                    <h3 class=" text-xs-center pricesTag" style="color:#43A047">
-                                        {{ prices[2].total.toLocaleString('en-US', { style: 'currency', currency: 'USD'
-                                        })
-                                        }}
-                                    </h3>
-                                </v-card>
-
-                            </v-flex>
 
                             <v-flex md12 class="text-xs-center">
                                 <p class="small_message" style="color:#E65100">Este resultado solo es un estimado del
@@ -217,7 +194,9 @@
                                 <br/>
                             </v-flex>
 
-                            <v-flex xs12><h1 class="text-xs-center">PLANES DE PAGO DISPONIBLES</h1></v-flex>
+                            <v-flex xs12><h1 class="text-xs-center planesTitulo">PLANES DE PAGO DISPONIBLES</h1></v-flex>
+                            <br />
+                            <br />
 
                             <panel-one
                                     title="Plan 1"
@@ -238,6 +217,7 @@
                             </panel-one>
                             <br />
                             <br />
+
                             <panel-two
                                     title="Plan 3"
                                     v-bind:value="full_price"
@@ -250,6 +230,13 @@
                                     prime="B"
                             >
                             </panel-two>
+
+                            <panel-three
+                                    title="Plan 5"
+                                    v-bind:value="full_price"
+                                    discountext="1 Cuota pagadera en Junio US $1,000.00"
+                                    discountext2="1 Cuota pagadera en Diciembre US $1,000.00"
+                            ></panel-three>
 
 
                             <v-flex xs12 text-xs-center>
@@ -270,6 +257,7 @@
                 </v-layout>
             </v-container>
         </main>
+
         <Footer></Footer>
     </v-app>
 </template>
@@ -277,8 +265,10 @@
 <script>
     import PanelOne from './PanelOne.vue';
     import PanelTwo from './PanelTwo.vue';
-    import Header from './Header.vue'
-    import Footer from './Footer.vue'
+    import PanelThree from './PanelThree.vue'
+    import Header from './Header.vue';
+    import Footer from './Footer.vue';
+    import Card from './Card.vue';
 
     export default {
 
@@ -341,16 +331,16 @@
             ],
 
             custom: {
-                name: '',
-                last: '',
+                name: 'Samuel',
+                last: 'Belot',
                 has_bros: 0,
                 bros: 0,
-                grade_id: {},
-                parent_name: '',
-                parent_last: '',
-                phone: '',
+                grade_id: {text: 'Decimo Grado', id: 14},
+                parent_name: 'Gerardo',
+                parent_last: 'Belot',
+                phone: '(222)22222222',
                 phone_aditional: '',
-                email: '',
+                email: 'info@info.com',
                 question: ''
             },
             prices: {},
@@ -425,7 +415,8 @@
                     })
             }
         },
-        components: {PanelOne, PanelTwo, Header, Footer}
+
+        components: {PanelOne, PanelTwo, Header, Footer, Card, PanelThree}
     }
 </script>
 
@@ -481,6 +472,10 @@
     .footer1 {
         height: 6rem;
         padding: 6.5rem 0;
+    }
+
+    .planesTitulo{
+        margin-bottom:3rem;
     }
 
     .loader {
