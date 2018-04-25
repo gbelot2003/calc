@@ -28,16 +28,16 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Pregunta de formulario</td>
+                    <td>Habilitar pregunta de referencia</td>
                     <td>
 
                         <div class="row">
                             <div class="form-group col-md-5">
 
                             </div>
-                            <div class="form-group col-md-5">
+                            <div class="form-group col-md-5">(
                                 {{ Form::checkbox('pregunta_a', true, $config->pregunta_a) }}
-                                ¿Aparece pregunta de fuente en formulario?
+                                )
                             </div>
                         </div>
                         <div class="col-md-12">

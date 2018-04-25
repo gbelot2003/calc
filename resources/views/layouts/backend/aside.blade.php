@@ -18,7 +18,7 @@
                 <li class="{{ \App\Helpers\Menu::activeMenu('dashboard') }}"><a href="{{ route('admin.dashboard') }}"><i
                                 class="fa fa-list"></i> <span>Formulario</span></a></li>
                 <li class="{{ \App\Helpers\Menu::activeMenu('grades') }}"><a href="{{ route('admin.grades') }}"><i
-                                class="fa fa-tags"></i> <span>Administración de Precios</span></a></li>
+                                class="fa fa-tags"></i> <span>Configuraciones</span></a></li>
                 <li class="{{ \App\Helpers\Menu::activeMenu('user') }}"><a href="{{ url('admin/user') }}"><i
                                 class="fa fa-user"></i> <span>Usuarios</span></a></li>
             </ul>
