@@ -1,18 +1,6 @@
 <template>
     <v-app>
-        <main>
-            <v-container>
-                <v-layout>
-                    <v-flex md12 xs12>
-                        <div style="width: 100%; text-align: center">
-                            <img width="100px" src="/images/logo_1.png" alt="logo">
-                        </div>
-
-                        <h2 class="hedadTitle" style="background-color: #2A5319">Calculadora Virtual</h2>
-                    </v-flex>
-                </v-layout>
-            </v-container>
-        </main>
+        <Header></Header>
         <main v-if="step_1">
             <v-container fill-height>
                 <div class="loader" v-if="loader">
@@ -281,27 +269,15 @@
                 </v-layout>
             </v-container>
         </main>
-        <v-footer height="auto" class="footer1" style="background-color: #2A5319">
-
-            <v-card-text class="white--text">
-                <v-container>
-                    <v-flex xs12 md12>
-                        <p class="text-xs-center">
-                            Copyright &copy;2018 — DelCampo International School S.A. de C.V. All rights reserved.
-                        </p>
-                    </v-flex>
-
-                </v-container>
-            </v-card-text>
-
-            </v-card>
-        </v-footer>
+        <Footer></Footer>
     </v-app>
 </template>
 
 <script>
     import PanelOne from './PanelOne.vue';
     import PanelTwo from './PanelTwo.vue';
+    import Header from './Header.vue'
+    import Footer from './Footer.vue'
 
     export default {
 
@@ -448,7 +424,7 @@
                     })
             }
         },
-        components: {PanelOne, PanelTwo}
+        components: {PanelOne, PanelTwo, Header, Footer}
     }
 </script>
 

@@ -1,21 +1,17 @@
 <template>
-    <v-toolbar app>
-        <v-toolbar-side-icon></v-toolbar-side-icon>
-        <v-toolbar-title class="white--text">Title</v-toolbar-title>
-        <v-spacer></v-spacer>
-        <v-btn icon>
-            <v-icon>search</v-icon>
-        </v-btn>
-        <v-btn icon>
-            <v-icon>apps</v-icon>
-        </v-btn>
-        <v-btn icon>
-            <v-icon>refresh</v-icon>
-        </v-btn>
-        <v-btn icon>
-            <v-icon>more_vert</v-icon>
-        </v-btn>
-    </v-toolbar>
+    <main>
+        <v-container>
+            <v-layout>
+                <v-flex md12 xs12>
+                    <div style="width: 100%; text-align: center">
+                        <img width="100px" src="/images/logo_1.png" alt="logo">
+                    </div>
+
+                    <h2 class="hedadTitle" style="background-color: #2A5319">Calculadora Virtual</h2>
+                </v-flex>
+            </v-layout>
+        </v-container>
+    </main>
 </template>
 
 <script>
