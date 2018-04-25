@@ -34,6 +34,11 @@ class GradesAdminController extends Controller
      */
     public function updateGrades(Request $request)
     {
+        $this->validate($request, [
+            'id' => 'integer|required',
+            'price' => 'required|numeric'
+        ]);
+
         $grade = Grade::findOrFail($request->get('id'));
         $grade->price = $request->get('price');
         $grade->save();
@@ -44,6 +49,13 @@ class GradesAdminController extends Controller
 
     public function updateTotals(Request $request)
     {
+        $this->validate($request, [
+            'id' => 'integer|required',
+            'name' => 'required|string',
+            'subtitle' => 'required|string',
+            'porcent' => 'required|numeric'
+        ]);
+
         $total = Total::findOrFail($request->get('id'));
         $total->update($request->all());
 
@@ -53,7 +65,6 @@ class GradesAdminController extends Controller
 
     public function updateConfig(Request $request)
     {
-        //dd($request->all());
         $config = Configuraciones::findOrFail($request->get('id'));
 
         if($request->has('pregunta_a')){
@@ -61,6 +72,13 @@ class GradesAdminController extends Controller
         } else {
             $request['pregunta_a'] = 0;
         }
+
+        $this->validate($request, [
+            'id' => 'integer|required',
+            'name' => 'required|string',
+            'pregunta_a' => 'required|boolean'
+        ]);
+
 
         $config->update($request->all());
 

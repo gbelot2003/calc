@@ -144,6 +144,7 @@
                 </v-layout>
             </v-container>
         </main>
+
         <main v-if="step_2">
             <v-container fill-height>
                 <v-layout row wrap align-center>
