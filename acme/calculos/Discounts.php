@@ -2,6 +2,7 @@
 namespace Acme\calculos;
 
 use App\Configuraciones;
+use App\Plan;
 
 class Discounts{
 
@@ -9,8 +10,11 @@ class Discounts{
     {
         $calculate = new CalculateTotalDiscount();
         $config = Configuraciones::first();
+        $plans = Plan::all();
+
 
         return [
+            'plans' => $plans,
             'config_name' => $config->name,
             array(
                 'subtitle' => $calculate->getDiscountSubTitle(1),
