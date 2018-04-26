@@ -60105,9 +60105,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
 
 
 
@@ -60138,49 +60135,28 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "v-container",
-    {
-      staticClass: "uppera",
-      attrs: { "grid-list-xl": "", "text-xs-center": "" }
-    },
-    [
-      _c(
-        "v-layout",
-        { attrs: { row: "", wrap: "" } },
-        [
-          _c("v-flex", { attrs: { md6: "", xs12: "" } }, [
-            _c("h2", { staticClass: "text-xs-center" }, [
-              _vm._v(_vm._s(_vm.title))
-            ]),
-            _vm._v(" "),
-            _c(
-              "div",
-              [
-                _c("p", { staticClass: "text-xs-center" }, [
-                  _vm._v(" Un cuota pagadera en Junio de US $1,000.00 ")
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "text-xs-center" }, [
-                  _vm._v("Una cuota pagadera en Diciembre de US $1,000.00 ")
-                ]),
-                _vm._v(" "),
-                _c("P", { staticClass: "text-xs-center" }, [
-                  _vm._v("10 cuotas mensuales de "),
-                  _c("strong", [
-                    _vm._v("US $" + _vm._s(_vm.calculatedValue) + ".00")
-                  ])
-                ])
-              ],
-              1
-            )
-          ])
-        ],
-        1
-      )
-    ],
-    1
-  )
+  return _c("v-flex", { staticClass: "uppera", attrs: { md6: "", xs12: "" } }, [
+    _c("h2", { staticClass: "text-xs-center" }, [_vm._v(_vm._s(_vm.title))]),
+    _vm._v(" "),
+    _c(
+      "div",
+      [
+        _c("p", { staticClass: "text-xs-center" }, [
+          _vm._v(" Un cuota pagadera en Junio de US $1,000.00 ")
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "text-xs-center" }, [
+          _vm._v("Una cuota pagadera en Diciembre de US $1,000.00 ")
+        ]),
+        _vm._v(" "),
+        _c("P", { staticClass: "text-xs-center" }, [
+          _vm._v("10 cuotas mensuales de "),
+          _c("strong", [_vm._v("US $" + _vm._s(_vm.calculatedValue) + ".00")])
+        ])
+      ],
+      1
+    )
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
