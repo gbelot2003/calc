@@ -331,16 +331,16 @@
             ],
 
             custom: {
-                name: 'Samuel',
-                last: 'Belot',
+                name: '',
+                last: '',
                 has_bros: 0,
                 bros: 0,
-                grade_id: {text: 'Decimo Grado', id: 14},
-                parent_name: 'Gerardo',
-                parent_last: 'Belot',
-                phone: '(222)22222222',
+                grade_id: {},
+                parent_name: '',
+                parent_last: '',
+                phone: '',
                 phone_aditional: '',
-                email: 'info@info.com',
+                email: '',
                 question: ''
             },
             prices: {},
