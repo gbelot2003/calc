@@ -10,6 +10,6 @@ class Plan extends Model
      * Mass Assaing
      * @var array
      */
-    protected $fillable = ['name', 'body', 'position', 'show'];
+    protected $fillable = ['title', 'discounttext', 'porcent', 'porcentext', 'context', 'show'];
 
 }

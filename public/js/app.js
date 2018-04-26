@@ -60140,13 +60140,16 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "v-container",
-    { attrs: { "grid-list-xl": "", "text-xs-center": "" } },
+    {
+      staticClass: "uppera",
+      attrs: { "grid-list-xl": "", "text-xs-center": "" }
+    },
     [
       _c(
         "v-layout",
         { attrs: { row: "", wrap: "" } },
         [
-          _c("v-flex", { attrs: { md8: "", "offset-md2": "", xs12: "" } }, [
+          _c("v-flex", { attrs: { md6: "", xs12: "" } }, [
             _c("h2", { staticClass: "text-xs-center" }, [
               _vm._v(_vm._s(_vm.title))
             ]),
@@ -61288,50 +61291,60 @@ var render = function() {
                                 )
                               ]),
                               _vm._v(" "),
-                              _c("panel-one", {
-                                attrs: {
-                                  title: _vm.plans[0].title,
-                                  value: _vm.full_price,
-                                  discountext: _vm.plans[0].discountext,
-                                  porcent: _vm.plans[0].porcent,
-                                  porcentext: _vm.plans[0].porcentext,
-                                  context: _vm.plans[0].context
-                                }
-                              }),
+                              _vm.plans[0].show
+                                ? _c("panel-one", {
+                                    attrs: {
+                                      title: _vm.plans[0].title,
+                                      value: _vm.full_price,
+                                      discountext: _vm.plans[0].discountext,
+                                      porcent: _vm.plans[0].porcent,
+                                      porcentext: _vm.plans[0].porcentext,
+                                      context: _vm.plans[0].context
+                                    }
+                                  })
+                                : _vm._e(),
                               _vm._v(" "),
-                              _c("panel-one", {
-                                attrs: {
-                                  title: _vm.plans[1].title,
-                                  value: _vm.full_price,
-                                  discountext: _vm.plans[1].discountext,
-                                  porcent: _vm.plans[1].porcent,
-                                  porcentext: _vm.plans[1].porcentext,
-                                  context: _vm.plans[1].context
-                                }
-                              }),
+                              _vm.plans[1].show
+                                ? _c("panel-one", {
+                                    attrs: {
+                                      title: _vm.plans[1].title,
+                                      value: _vm.full_price,
+                                      discountext: _vm.plans[1].discountext,
+                                      porcent: _vm.plans[1].porcent,
+                                      porcentext: _vm.plans[1].porcentext,
+                                      context: _vm.plans[1].context
+                                    }
+                                  })
+                                : _vm._e(),
                               _vm._v(" "),
-                              _c("panel-two", {
-                                attrs: {
-                                  title: _vm.plans[2].title,
-                                  value: _vm.full_price,
-                                  context: _vm.plans[2].context
-                                }
-                              }),
+                              _vm.plans[2].show
+                                ? _c("panel-two", {
+                                    attrs: {
+                                      title: _vm.plans[2].title,
+                                      value: _vm.full_price,
+                                      context: _vm.plans[2].context
+                                    }
+                                  })
+                                : _vm._e(),
                               _vm._v(" "),
-                              _c("panel-two", {
-                                attrs: {
-                                  title: _vm.plans[3].title,
-                                  value: _vm.full_price,
-                                  prime: "B"
-                                }
-                              }),
+                              _vm.plans[3].show
+                                ? _c("panel-two", {
+                                    attrs: {
+                                      title: _vm.plans[3].title,
+                                      value: _vm.full_price,
+                                      prime: "B"
+                                    }
+                                  })
+                                : _vm._e(),
                               _vm._v(" "),
-                              _c("panel-three", {
-                                attrs: {
-                                  title: _vm.plans[4].title,
-                                  value: _vm.full_price
-                                }
-                              }),
+                              _vm.plans[4].show
+                                ? _c("panel-three", {
+                                    attrs: {
+                                      title: _vm.plans[4].title,
+                                      value: _vm.full_price
+                                    }
+                                  })
+                                : _vm._e(),
                               _vm._v(" "),
                               _c(
                                 "v-flex",

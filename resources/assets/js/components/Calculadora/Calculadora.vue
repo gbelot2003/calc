@@ -196,7 +196,7 @@
 
                             <v-flex xs12><h1 class="text-xs-center planesTitulo">PLANES DE PAGO DISPONIBLES</h1></v-flex>
 
-                            <panel-one
+                            <panel-one v-if="plans[0].show"
                                     v-bind:title="plans[0].title"
                                     v-bind:value="full_price"
                                     v-bind:discountext="plans[0].discountext"
@@ -205,7 +205,7 @@
                                     v-bind:context="plans[0].context"
                             ></panel-one>
 
-                            <panel-one
+                            <panel-one v-if="plans[1].show"
                                     v-bind:title="plans[1].title"
                                     v-bind:value="full_price"
                                     v-bind:discountext="plans[1].discountext"
@@ -215,21 +215,21 @@
                             >
                             </panel-one>
 
-                            <panel-two
+                            <panel-two v-if="plans[2].show"
                                     v-bind:title="plans[2].title"
                                     v-bind:value="full_price"
                                     v-bind:context="plans[2].context"
                             >
                             </panel-two>
 
-                            <panel-two
+                            <panel-two v-if="plans[3].show"
                                     v-bind:title="plans[3].title"
                                     v-bind:value="full_price"
                                     prime="B"
                             >
                             </panel-two>
 
-                            <panel-three
+                            <panel-three v-if="plans[4].show"
                                     v-bind:title="plans[4].title"
                                     v-bind:value="full_price"
                             >

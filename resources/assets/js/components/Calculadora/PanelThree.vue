@@ -1,8 +1,8 @@
 <template>
-    <v-container grid-list-xl text-xs-center>
+    <v-container grid-list-xl text-xs-center class="uppera">
         <v-layout row wrap>
 
-            <v-flex md8 offset-md2 xs12>
+            <v-flex md6 xs12>
                 <h2 class="text-xs-center">{{ title }}</h2>
                 <div>
                     <p class="text-xs-center"> Un cuota pagadera en Junio de US $1,000.00 </span></p>

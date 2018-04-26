@@ -90,4 +90,24 @@ class GradesAdminController extends Controller
     }
 
 
+    public function updatePlans(Request $request)
+    {
+        $plan = Plan::findOrFail($request->get('id'));
+
+        if($request->has('show')){
+            $request['show'] = 1;
+        } else {
+            $request['show'] = 0;
+        }
+
+        $plan->update($request->all());
+
+
+        flash('Registro actualizado.')->success();
+        return redirect()->to('/admin/grades/');
+
+
+
+    }
+
 }
