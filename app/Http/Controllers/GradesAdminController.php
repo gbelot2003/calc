@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Configuraciones;
 use App\Grade;
+use App\Plan;
 use App\Total;
 use Illuminate\Http\Request;
 
@@ -24,8 +25,10 @@ class GradesAdminController extends Controller
         $grades = Grade::all();
         $totals = Total::all();
         $config = Configuraciones::first();
+        $planes = Plan::all();
+
         $odd = true;
-        return View('grades.index', compact('grades', 'totals', 'odd', 'config'));
+        return View('grades.index', compact('grades', 'totals', 'odd', 'config', 'planes'));
     }
 
     /**

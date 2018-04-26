@@ -5,8 +5,8 @@
             <v-flex md8 offset-md2 xs12>
                 <h2 class="text-xs-center">{{ title }}</h2>
                 <div>
-                    <p class="text-xs-center">{{ discountext }}</span></p>
-                    <p class="text-xs-center">{{ discountext2 }}</span></p>
+                    <p class="text-xs-center"> Un cuota pagadera en Junio de US $1,000.00 </span></p>
+                    <p class="text-xs-center">Una cuota pagadera en Diciembre de US $1,000.00 </span></p>
                     <P class="text-xs-center">10 cuotas mensuales de <strong>US ${{ calculatedValue }}.00</strong></P>
                 </div>
             </v-flex>

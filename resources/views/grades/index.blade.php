@@ -13,5 +13,9 @@
         <section class="col-lg-6 connectedSortable">
             @include('grades.panels._anios')
         </section>
+        <section class="col-lg-6 connectedSortable">
+            @include('grades.panels._planes')
+        </section>
+
     </div>
 @endsection

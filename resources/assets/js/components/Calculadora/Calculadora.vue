@@ -195,48 +195,47 @@
                             </v-flex>
 
                             <v-flex xs12><h1 class="text-xs-center planesTitulo">PLANES DE PAGO DISPONIBLES</h1></v-flex>
-                            <br />
-                            <br />
 
                             <panel-one
-                                    title="Plan 1"
+                                    v-bind:title="plans[0].title"
                                     v-bind:value="full_price"
-                                    discountext="1 Cuota pagadera en Junio de"
-                                    porcent="7"
-                                    porcentext="El descuento sobre plan de contado 1 cuota es del "
-                                    context="A"
+                                    v-bind:discountext="plans[0].discountext"
+                                    v-bind:porcent="plans[0].porcent"
+                                    v-bind:porcentext="plans[0].porcentext"
+                                    v-bind:context="plans[0].context"
                             ></panel-one>
+
                             <panel-one
-                                    title="Plan 2"
+                                    v-bind:title="plans[1].title"
                                     v-bind:value="full_price"
-                                    discountext="2 Cuotas pagaderas en Junio y Diciembre"
-                                    porcent="3"
-                                    porcentext="El descuento sobre plan de contado 2 cuotas es de"
-                                    context="B"
+                                    v-bind:discountext="plans[1].discountext"
+                                    v-bind:porcent="plans[1].porcent"
+                                    v-bind:porcentext="plans[1].porcentext"
+                                    v-bind:context="plans[1].context"
                             >
                             </panel-one>
-                            <br />
-                            <br />
 
                             <panel-two
-                                    title="Plan 3"
+                                    v-bind:title="plans[2].title"
                                     v-bind:value="full_price"
-                                    prime="A"
+                                    v-bind:context="plans[2].context"
                             >
                             </panel-two>
+
                             <panel-two
-                                    title="Plan 4"
+                                    v-bind:title="plans[3].title"
                                     v-bind:value="full_price"
                                     prime="B"
                             >
                             </panel-two>
 
                             <panel-three
-                                    title="Plan 5"
+                                    v-bind:title="plans[4].title"
                                     v-bind:value="full_price"
-                                    discountext="1 Cuota pagadera en Junio US $1,000.00"
-                                    discountext2="1 Cuota pagadera en Diciembre US $1,000.00"
-                            ></panel-three>
+                            >
+                            </panel-three>
+
+
 
 
                             <v-flex xs12 text-xs-center>
@@ -269,6 +268,7 @@
     import Header from './Header.vue';
     import Footer from './Footer.vue';
     import Card from './Card.vue';
+    import Plan from './Plan.vue';
 
     export default {
 
@@ -348,6 +348,7 @@
             grade_label: '',
             config_name: '',
             pregunta_a: '',
+            plans: [],
 
         }),
         created: {},
@@ -390,6 +391,7 @@
                     .then(resp => {
                         this.prices = resp.data;
                         this.config_name = resp.data.config_name;
+                        this.plans = resp.data.plans;
                         this.step_1 = false;
                         this.step_2 = true;
                         setTimeout(function () {
@@ -416,7 +418,7 @@
             }
         },
 
-        components: {PanelOne, PanelTwo, Header, Footer, Card, PanelThree}
+        components: {PanelOne, PanelTwo, Header, Footer, Card, PanelThree, Plan}
     }
 </script>
 

@@ -15,10 +15,11 @@ class CreatePlansTable extends Migration
     {
         Schema::create('plans', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->text('body');
-            $table->smallInteger('position');
-            $table->string('colors');
+            $table->string('title');
+            $table->text('discountext')->nullable();
+            $table->smallInteger('porcent')->nullable();
+            $table->text('porcentext')->nullable();
+            $table->string('context')->nullable();
             $table->boolean('show');
             $table->timestamps();
         });
