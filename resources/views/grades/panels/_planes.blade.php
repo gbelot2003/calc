@@ -24,19 +24,6 @@
                                     {!! Form::text('title', isset($grade->title)? $grade->title: null, ['class' => 'form-control text-right price']) !!}
 
                                 </div>
-                                <div class="form-group col-md-6">
-                                    <label>Primer Párrafo</label>
-                                    {!! Form::text('discountext', isset($grade->discountext)? $grade->discountext: null, ['class' => 'form-control text-right price']) !!}
-
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label>Porciento</label>
-                                    {!! Form::text('porcent', isset($grade->porcent)? $grade->porcent: null, ['class' => 'form-control text-right price']) !!}
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label>Contexto</label>
-                                    {!! Form::text('context', isset($grade->context)? $grade->context: null, ['class' => 'form-control text-right price']) !!}
-
                                 </div>
                                 <div class="form-group col-md-6">
                                     {{ Form::checkbox('show', true, $grade->show) }} Habilitar/Desabilitar
