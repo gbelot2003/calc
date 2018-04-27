@@ -19,7 +19,7 @@
                             {!! Form::hidden('id', 1) !!}
                         </div>
                         <div class="form-group col-md-4">
-                            {!! Form::text('name', isset($config->name)? $config->name : null, ['class' => 'form-control text-right']) !!}
+                            {!! Form::text('name', isset($config->name)? $config->name : null, ['class' => 'lesspadding form-control text-right']) !!}
                         </div>
 
                     </div>
@@ -34,9 +34,9 @@
                         <div class="form-group col-md-5">
 
                         </div>
-                        <div class="form-group col-md-5">(
+                        <div class="form-group col-md-5">
                             {{ Form::checkbox('pregunta_a', true, $config->pregunta_a) }}
-                            )
+
                         </div>
                     </div>
                     <div class="col-md-12">

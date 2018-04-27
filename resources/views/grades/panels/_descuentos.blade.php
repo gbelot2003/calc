@@ -19,10 +19,10 @@
                                 {!! Form::text('name', isset($grade->name)? $grade->name : null, ['class' => 'form-control text-right']) !!}
                             </div>
                             <div class="form-group col-md-4">
-                                {!! Form::text('subtitle', isset($grade->subtitle)? $grade->subtitle : null, ['class' => 'form-control text-right price']) !!}
+                                {!! Form::text('subtitle', isset($grade->subtitle)? $grade->subtitle : null, ['class' => 'lesspadding form-control text-right price']) !!}
                             </div>
                             <div class="form-group col-md-2">
-                                {!! Form::text('porcent', isset($grade->porcent)? $grade->porcent : null, ['class' => 'form-control text-right price']) !!}
+                                {!! Form::text('porcent', isset($grade->porcent)? $grade->porcent : null, ['class' => 'lesspadding form-control text-right price']) !!}
                             </div>
                             <div class="col-md-12">
                                 <button type="submit" class="btn"> Editar</button>

@@ -21,7 +21,7 @@
                                     {!! Form::hidden('id', $grade->id) !!}
 
                                     <label>Titulo *</label>
-                                    {!! Form::text('title', isset($grade->title)? $grade->title: null, ['class' => 'form-control text-right price']) !!}
+                                    {!! Form::text('title', isset($grade->title)? $grade->title: null, ['class' => 'lesspadding form-control text-right price']) !!}
 
                                 </div>
                                 </div>

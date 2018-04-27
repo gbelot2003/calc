@@ -18,7 +18,7 @@
                                 <div class="form-group col-md-12">
                                     {{  Form::token() }}
                                     {!! Form::hidden('id', $grade->id) !!}
-                                    {!! Form::input('number', 'price', isset($grade->price)? $grade->price: null, ['class' => 'form-control text-right price', 'step' => 'any']) !!}
+                                    {!! Form::text('price', isset($grade->price)? $grade->price: null, ['class' => 'lesspadding form-control text-right price', 'step' => 'any']) !!}
                                 </div>
                                 <div class="col-md-12">
                                     <button type="submit" class="btn"> Editar</button>

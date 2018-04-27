@@ -281,9 +281,12 @@
 
 <!-- jQuery 2.2.3 -->
 <script src="{{ asset("js/main.js") }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-price-format/2.2.0/jquery.priceformat.js"></script>
+
 
 <script>
     $.widget.bridge('uibutton', $.ui.button);
+
 </script>
 <script>
     $('#flash-overlay-modal').modal();

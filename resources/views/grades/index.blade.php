@@ -18,4 +18,10 @@
         </section>
 
     </div>
+    <style>
+        .lesspadding {
+            padding: 0 2rem 0 0 !important;
+            width: 60%;
+        }
+    </style>
 @endsection
