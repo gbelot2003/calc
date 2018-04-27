@@ -3,7 +3,6 @@
         <h3 class="box-title">Listado de Descuentos</h3>
     </div>
 
-    <div class="table-responsive">
         <table class="table table-hover table-striped">
             <thead>
                 <th>Nombre</th>
@@ -19,7 +18,7 @@
                                 <div class="form-group col-md-12">
                                     {{  Form::token() }}
                                     {!! Form::hidden('id', $grade->id) !!}
-                                    {!! Form::text('price', isset($grade->price)? $grade->price: null, ['class' => 'form-control text-right price']) !!}
+                                    {!! Form::input('number', 'price', isset($grade->price)? $grade->price: null, ['class' => 'form-control text-right price', 'step' => 'any']) !!}
                                 </div>
                                 <div class="col-md-12">
                                     <button type="submit" class="btn"> Editar</button>
@@ -31,7 +30,7 @@
             @endforeach
             </tbody>
         </table>
-    </div>
+
 </div>
 <style>
     .add-1  {

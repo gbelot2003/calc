@@ -4,7 +4,7 @@
         <h3 class="box-title">Listado de Planes</h3>
     </div>
 
-    <div class="table-responsive">
+
         <table class="table table-hover table-striped">
             <thead>
 
@@ -41,7 +41,7 @@
             @endforeach
             </tbody>
         </table>
-    </div>
+
 </div>
 <style>
     .add-1 {
