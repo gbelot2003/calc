@@ -29,7 +29,7 @@ class TotalsTableSeeder extends Seeder
             ),
             1 =>
             array (
-                'id' => 3,
+                'id' => 2,
                 'name' => 'Con tarjeta de BAC Credomatic Economía 7%',
                 'porcent' => 7.0,
                 'created_at' => '2017-05-03 01:19:33',
@@ -38,7 +38,7 @@ class TotalsTableSeeder extends Seeder
             ),
             2 =>
             array (
-                'id' => 4,
+                'id' => 3,
                 'name' => 'Débito automático FICOHSA Credomatic 10%',
                 'porcent' => 10.0,
                 'created_at' => '2017-05-03 01:19:35',
