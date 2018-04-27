@@ -13,6 +13,9 @@
 
 use Illuminate\Auth\Middleware\Authenticate;
 
+Route::get('customs/grade/{id}', 'CustomController@getPrice');
+Route::post('/customs', 'CustomController@store');
+
 Route::get('/', 'PagesController@index')->name('pages.index');
 Route::get('/config', 'PagesController@config')->name('pages.config');
 
@@ -20,8 +23,7 @@ Route::get('/cuenta-desactivada', 'PagesController@unactive')->name('pages.unact
 Auth::routes();
 
 
-Route::post('/customs', 'CustomController@store');
-Route::get('customs/grade/{id}', 'CustomController@getPrice');
+
 
 Route::group(array('prefix' => 'admin'), function(){
     Route::get('/dashboard', 'DashboardController@index')->name('admin.dashboard');
@@ -35,10 +37,6 @@ Route::group(array('prefix' => 'admin'), function(){
     Route::post('/grades/update-config', 'GradesAdminController@updateConfig');
     Route::post('/grades/update-planes', 'GradesAdminController@updatePlans');
 
-
-
-    //Route::get('/family-discounts', 'FamilyDiscounAdminController@index')->name('admin.family');
-    //Route::get('/discounts', 'DiscountApiController@index')->name('admin.discount');
     Route::resource('/user', 'UserController');
 
 

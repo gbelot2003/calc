@@ -24,10 +24,10 @@ class CustomController extends Controller
      */
     public function store(CustomRequest $request)
     {
+
         $custom = Custom::create($request->all());
         $totales = new Discounts();
         $tgral = $totales->getDiscountTotal($custom->grade_id, $custom->bros);
-
 
         return $tgral;
     }

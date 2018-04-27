@@ -21,13 +21,13 @@ class Discounts{
                 'title' => $calculate->getDiscountName(1),
                 'total' => $calculate->calculateDiscounts($grade_id, $bros, 1)),
             array(
+                'subtitle' => $calculate->getDiscountSubTitle(2),
+                'title' => $calculate->getDiscountName(2),
+                'total' => $calculate->calculateDiscounts($grade_id, $bros, 2)),
+            array(
                 'subtitle' => $calculate->getDiscountSubTitle(3),
                 'title' => $calculate->getDiscountName(3),
                 'total' => $calculate->calculateDiscounts($grade_id, $bros, 3)),
-            array(
-                'subtitle' => $calculate->getDiscountSubTitle(4),
-                'title' => $calculate->getDiscountName(4),
-                'total' => $calculate->calculateDiscounts($grade_id, $bros, 4)),
         ];
     }
 }
