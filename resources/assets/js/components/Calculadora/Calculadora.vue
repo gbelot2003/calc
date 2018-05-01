@@ -225,7 +225,7 @@
                             <panel-two v-if="plans[3].show"
                                     v-bind:title="plans[3].title"
                                     v-bind:value="full_price"
-                                    prime="B"
+                                    v-bind:prime="plans[3].context"
                             >
                             </panel-two>
 

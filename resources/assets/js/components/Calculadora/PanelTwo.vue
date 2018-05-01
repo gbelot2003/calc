@@ -20,7 +20,7 @@
     import Vue from 'vue';
 
     export default {
-        props: ['title', 'value', 'prime', 'primetext', 'cuotext'],
+        props: ['title', 'value', 'prime', 'primetext', 'context'],
         data(){
             return {}
         },
@@ -30,7 +30,7 @@
             },
 
             PrimeValue(){
-                if (this.prime === "A") {
+                if (this.context === "A") {
                     return 1000;
                 } else {
                     return (this.value / 12);
